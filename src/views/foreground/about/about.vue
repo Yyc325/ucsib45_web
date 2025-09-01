@@ -68,17 +68,17 @@
                 Our IB curriculum challenges students to think critically and act ethically. Through interdisciplinary courses like TOK (Theory of Knowledge) and Extended Essay projects, learners connect classroom theory to real-world issues.Faculty mentors emphasize inquiry-driven learning, fostering skills in research, collaboration, and multilingual communication. Flexible pathways, including STEM-focused tracks and arts electives, ensure every student’s potential aligns with the IB’s mission to educate “the whole person.” </span>
             </p>
           </div>
-          <div class="about-card-item resource">
+          <div class="about-card-item community">
             <p class="about-card-item__info">
               <span class="about-card-item__image">
                 <span class="about-card-item__image-show">
                   <img src="https://website.xycloud.net.cn/images/about5.png"/>
                 <span class="about-card-item__image-description">
-                  Learn More About Resource
+                  Learn More About Community
                 </span>
                 </span>
               </span>
-              <span class="about-card-item__title">Resource</span>
+              <span class="about-card-item__title">Community</span>
               <span class="about-card-item__desc">
                 Ulink IB empowers students to explore beyond textbooks through hands-on research. From environmental science fieldwork to social entrepreneurship case studies, projects align with the IB’s emphasis on conceptual understanding and global relevance. Partnerships with local universities and NGOs provide mentorship, while annual Research Symposiums showcase student discoveries—whether in AI ethics, cultural anthropology, or sustainable design—proving that young minds can drive meaningful change.
               </span>

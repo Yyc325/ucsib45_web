@@ -213,7 +213,7 @@ const primaryNavs = computed(() => {
       name: "",
     },
     {
-      label: t("primaryNav.resource"),
+      label: t("primaryNav.community"),
       name: "",
     },
     {

@@ -28,7 +28,7 @@ export default {
         academics: "学术",
         campusLife: "校园生活",
         collegeApplication: "大学申请",
-        resource: "资源",
+        community: "社区",
         admission: "入学",
         about: "关于",
     },
