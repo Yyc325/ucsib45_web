@@ -39,6 +39,13 @@ export default {
       }
     }
   },
+  academics: {
+    themeTabs: {
+      facultyMembers: "Faculty members: 25+",
+      facultyRatio: "Faculty:Students : 1:5",
+      courses: "Courses: 30+"
+    }
+  },
   login: {
     title: "Welcome to the school website",
     label: "Sign in",

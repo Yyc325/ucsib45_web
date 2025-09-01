@@ -41,6 +41,13 @@ export default {
             }
         }
     },
+    academics: {
+        themeTabs: {
+            facultyMembers: "教师人数：25+",
+            facultyRatio: "师生比：1:5",
+            courses: "课程数：30+"
+        }
+    },
     login: {
         title: "学校官网",
         label: "登录",

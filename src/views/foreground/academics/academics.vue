@@ -112,32 +112,21 @@
   </div>
 </template>
 <script lang="ts">
-import {defineComponent, reactive, toRefs} from "vue";
-import {useI18n} from "vue-i18n";
+import { defineComponent, computed } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name:'Academics',
   setup(){
-    const {t} = useI18n()
-    const state = reactive({
-      themeTabs:[
-        {
-          label:'Faculty members:25+',
-          name:"1"
-        },
-        {
-          label:'Faculty:Students : 1:5',
-          name:"2"
-        },
-        {
-          label:'Courses:30+',
-          name:"3"
-        },
-      ]
-    })
+    const { t } = useI18n();
+    const themeTabs = computed(() => [
+      { label: t('academics.themeTabs.facultyMembers'), name: "1" },
+      { label: t('academics.themeTabs.facultyRatio'), name: "2" },
+      { label: t('academics.themeTabs.courses'), name: "3" }
+    ]);
     return {
       t,
-      ...toRefs(state)
+      themeTabs
     }
   }
 })
