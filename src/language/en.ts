@@ -197,7 +197,10 @@ export default {
     teamTitle: "Our Team Members",
     member1: { name: "Nicole Zhao", title: "Head of the UI group", desc: "Expert in design." },
     member2: { name: "Miles Cai", title: "Head of the website team", desc: "" },
-    member3: { name: "Matthew Dai", title: "Team Manager", desc: "In charge of managing the progress of the team" }
+    member3: { name: "Matthew Dai", title: "Team Manager", desc: "In charge of managing the progress of the team" },
+    member4: { name: "David", title: "Developer", desc: "Front-end specialist." },
+    member5: { name: "Emma", title: "Designer", desc: "UI/UX expert." },
+    member6: { name: "Frank", title: "Product Manager", desc: "Coordinates the team." }
   }
 };
 

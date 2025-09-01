@@ -129,6 +129,24 @@ const members = computed(() => [
     name: t('about.member3.name'),
     title: t('about.member3.title'),
     desc: t('about.member3.desc')
+  },
+  {
+    avatar: 'https://website.xycloud.net.cn/images/user-avatar.jpg',
+    name: t('about.member4.name'),
+    title: t('about.member4.title'),
+    desc: t('about.member4.desc')
+  },
+  {
+    avatar: 'https://website.xycloud.net.cn/images/user-avatar.jpg',
+    name: t('about.member5.name'),
+    title: t('about.member5.title'),
+    desc: t('about.member5.desc')
+  },
+  {
+    avatar: 'https://website.xycloud.net.cn/images/user-avatar.jpg',
+    name: t('about.member6.name'),
+    title: t('about.member6.title'),
+    desc: t('about.member6.desc')
   }
 ])
 </script>
