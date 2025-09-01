@@ -185,5 +185,12 @@ export default {
     table:{
       empty:"No Data"
     }
+  },
+  about: {
+    teamTitle: "Our Team Members",
+    member1: { name: "Nicole Zhao", title: "Head of the UI group", desc: "Expert in design." },
+    member2: { name: "Miles Cai", title: "Head of the website team", desc: "" },
+    member3: { name: "Matthew Dai", title: "Team Manager", desc: "In charge of managing the progress of the team" }
   }
 };
+

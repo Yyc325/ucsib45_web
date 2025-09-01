@@ -3,10 +3,27 @@
     <div class="about-container">
       <div class="about-header">
         <div class="about-header-title">
-          About
+          Who We Are
         </div>
       </div>
       <div class="about-body">
+        <div class="about-team-member">
+          <div class="about-section__title">{{ t('about.teamTitle') }}</div>
+          <div class="about-section__content">
+            <div class="member-cards">
+              <div class="member-card" v-for="(member, i) in members" :key="i">
+                <div class="member-card__avatar">
+                  <img :src="member.avatar" alt="">
+                </div>
+                <div class="member-card__info">
+                  <div class="member-card__name">{{ member.name }}</div>
+                  <div class="member-card__title">{{ member.title }}</div>
+                  <div class="member-card__desc">{{ member.desc }}</div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="about-card-list">
           <div class="about-card-item news">
             <p class="about-card-item__info">
@@ -90,7 +107,30 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from "vue-i18n"
+const { t } = useI18n()
 
+const members = computed(() => [
+  {
+    avatar: 'https://website.xycloud.net.cn/images/user-avatar.jpg',
+    name: t('about.member1.name'),
+    title: t('about.member1.title'),
+    desc: t('about.member1.desc')
+  },
+  {
+    avatar: 'https://website.xycloud.net.cn/images/Selfie1.jpg',
+    name: t('about.member2.name'),
+    title: t('about.member2.title'),
+    desc: t('about.member2.desc')
+  },
+  {
+    avatar: 'https://website.xycloud.net.cn/images/user-avatar.jpg',
+    name: t('about.member3.name'),
+    title: t('about.member3.title'),
+    desc: t('about.member3.desc')
+  }
+])
 </script>
 
 <style scoped lang="scss">

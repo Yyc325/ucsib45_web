@@ -179,5 +179,12 @@ export default {
         table: {
             empty: "暂无数据"
         }
-    }
+    },
+    about: {
+        teamTitle: "我们的团队成员",
+        member1: { name: "赵怡墨", title: "用户界面组负责人", desc: "设计专家" },
+        member2: { name: "蔡天宇", title: "网站项目总负责人", desc: "管理网站团队，搭建学校网站" },
+        member3: { name: "戴震", title: "团队管理者", desc: "负责管理团队工作进度" }
+    },
+    
 };
