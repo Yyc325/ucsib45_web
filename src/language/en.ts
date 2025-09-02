@@ -251,12 +251,12 @@ export default {
   },
   about: {
     teamTitle: "Our Team Members",
-    member1: { name: "Nicole Zhao", title: "Head of the UI group", desc: "Expert in UI design." },
-    member2: { name: "Miles Cai", title: "Head of the website team", desc: "" },
-    member3: { name: "Matthew Dai", title: "Team Manager", desc: "In charge of managing the progress of the team" },
-    member4: { name: "Cindy Fan", title: "Designer", desc: "In charge of UI designing" },
-    member5: { name: "Emma", title: "Designer", desc: "UI/UX expert." },
-    member6: { name: "Frank", title: "Product Manager", desc: "Coordinates the team." }
+    member1: { name: "Nicole Zhao", title: "Head of the UI group", desc: "In charge of UI designing" },
+    member2: { name: "Miles Cai", title: "Head of the website team", desc: "Manage the website team, and be responsible for both front-end and back-end development as well as server management." },
+    member3: { name: "Matthew Dai", title: "Website Manager", desc: "In charge of managing the progress of the team" },
+    member4: { name: "Cindy Fan", title: "Head of Editorial Department", desc: "" },
+    member5: { name: "Lisa Min", title: "Front-end Developer", desc: "" },
+    member6: { name: "Frank", title: "Product Manager", desc: "" }
   }
 };
 
