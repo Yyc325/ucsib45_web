@@ -76,7 +76,10 @@ export default {
     },
     aboutpage:{
         Title:{
-            title1:"关于我们..."
+            title1:"关于我们...",
+        },
+        Paragraph:{
+            description:"Hi！欢迎来到 ucsib45.com！这是Ulink College of Shanghai IB 部门的官方网站，由几位IBers负责运营。关注我们，您就能了解 UCS IB 最新的活动和新闻，探索能确保您获得 7 分成绩的 IB 课程，并参与社区讨论及时获取相关信息。"
         },
         News:{
             title:"新闻",
@@ -248,7 +251,7 @@ export default {
         member1: { name: "赵怡墨", title: "用户界面组负责人", desc: "负责团队UI设计" },
         member2: { name: "蔡天宇", title: "网站项目总负责人", desc: "管理网站团队，同时负责前端、后端开发及服务器管理" },
         member3: { name: "戴震", title: "网站项目管理者", desc: "负责管理团队工作进度,同时负责UI设计" },
-        member4: { name: "范泽馨", title: "编辑部负责人", desc: "" },
+        member4: { name: "范泽馨", title: "编辑部负责人", desc: "负责网站文本编辑工作" },
         member5: { name: "闵瑶", title: "前端开发工程师", desc: "" },
         member6: { name: "弗兰克", title: "产品经理", desc: "" }
     },

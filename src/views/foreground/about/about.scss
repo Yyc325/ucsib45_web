@@ -16,6 +16,27 @@
         font-size: 108px;
         font-weight: bold;
       }
+      .about-header-paragraph {
+        font-size: 32px;
+        color: #444;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        line-height: 1.8;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 1px;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .about-header-line {
+        display: block;
+        margin: 0 auto;
+        margin-top: 32px;
+        max-width: 1900px;  
+        width: 100%;
+        height: auto;
+      }
     }
 
     .about-body {

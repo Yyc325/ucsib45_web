@@ -74,7 +74,11 @@ export default {
   },
   aboutpage:{
     Title:{
-      title1:"Who We Are"
+      title1:"Who We Are",
+      
+    },
+    Paragraph:{
+      description:"This is the official website of the IB Department at Ulink College of Shanghai, created and run by a group of IB students. Follow us to stay updated on UCS IB’s latest activities and news, explore IB courses designed to help you achieve a solid 7, and join community discussions to stay connected and informed!"
     },
     News:{
       title:"News",
@@ -254,7 +258,7 @@ export default {
     member1: { name: "Nicole Zhao", title: "Head of the UI group", desc: "In charge of UI designing" },
     member2: { name: "Miles Cai", title: "Head of the website team", desc: "Manage the website team, and be responsible for both front-end and back-end development as well as server management." },
     member3: { name: "Matthew Dai", title: "Website Manager", desc: "In charge of managing the progress of the team" },
-    member4: { name: "Cindy Fan", title: "Head of Editorial Department", desc: "" },
+    member4: { name: "Cindy Fan", title: "Head of Editorial Department", desc: "In charge of website’s editorial content" },
     member5: { name: "Lisa Min", title: "Front-end Developer", desc: "" },
     member6: { name: "Frank", title: "Product Manager", desc: "" }
   }

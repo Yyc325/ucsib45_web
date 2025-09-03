@@ -5,6 +5,10 @@
         <div class="about-header-title">
           {{ t('aboutpage.Title.title1') }}
         </div>
+        <img class="about-header-line" src="https://website.xycloud.net.cn/images/home-background.png"/>
+        <div class="about-header-paragraph">
+          {{ t('aboutpage.Paragraph.description') }}
+        </div>
       </div>
       <div class="about-body">
         <div class="about-team-member">
@@ -131,7 +135,7 @@ const members = computed(() => [
     desc: t('about.member3.desc')
   },
   {
-    avatar: 'https://website.xycloud.net.cn/images/user-avatar.jpg',
+    avatar: 'https://website.xycloud.net.cn/images/Selfie3.jpg',
     name: t('about.member4.name'),
     title: t('about.member4.title'),
     desc: t('about.member4.desc')
