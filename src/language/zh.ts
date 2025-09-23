@@ -253,7 +253,7 @@ export default {
         member3: { name: "戴震", title: "网站项目管理者", desc: "负责管理团队工作进度,同时负责UI设计" },
         member4: { name: "范泽馨", title: "编辑部负责人", desc: "负责网站文本编辑工作" },
         member5: { name: "闵瑶", title: "前端开发工程师", desc: "" },
-        member6: { name: "弗兰克", title: "产品经理", desc: "" }
+        member6: { name: "陈奕冰", title: "产品工程师", desc: "负责UI设计" }
     },
     
 };

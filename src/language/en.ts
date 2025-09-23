@@ -260,7 +260,7 @@ export default {
     member3: { name: "Matthew Dai", title: "Website Manager", desc: "In charge of managing the progress of the team" },
     member4: { name: "Cindy Fan", title: "Head of Editorial Department", desc: "In charge of website’s editorial content" },
     member5: { name: "Lisa Min", title: "Front-end Developer", desc: "" },
-    member6: { name: "Frank", title: "Product Manager", desc: "" }
+    member6: { name: "Cicelie Chen", title: "Product Designer", desc: "In charge of UI designing" }
   }
 };
 
