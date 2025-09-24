@@ -70,8 +70,7 @@ export default {
     admission:{
         applicationguide:{
         title:"申请指南",
-        sub1:"申请材料",
-        sub2:"费用明细"
+        sub1:"",
         }
     },
     aboutpage:{

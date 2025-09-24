@@ -11,22 +11,13 @@
           <template v-if="videoUrl">
             <video :src="videoUrl" controls></video>
           </template>
-          <template v-else>
-            <div class="preview-video__empty">
-              <span>Video</span>
-            </div>
-          </template>
         </div>
         <div class="admission-section">
           <div class="admission-section__title">
             {{ t('admission.applicationguide.title') }}
           </div>
           <div class="admission-section__content">
-            <ul class="link-list">
-              <li class="link-item" v-for="(link,i) in linkList" :key="i">
-                <a :href="link.url">{{ t(link.label) }}</a>
-              </li>
-            </ul>
+            {{ t('admission.applicationguide.sub1') }}
           </div>
         </div>
         <div class="admission-section faq">
@@ -34,35 +25,18 @@
             FAQ
           </div>
           <div class="admission-section__content">
-            <ul class="faq-list">
-              <li class="faq-item" v-for="(faq,i) in faqList" :key="i">
-                <span class="faq-item__role">{{faq.role}}:</span>
-                <span class="faq-item__content">{{faq.speak}}</span>
-              </li>
-            </ul>
-            <div class="online-consultation">
-              <a href="">Online Consultation</a>
-            </div>
+            <el-collapse accordion>
+              <el-collapse-item
+                v-for="(faq, i) in faqList"
+                :key="i"
+                :title="faq.question"
+              >
+                <div>{{ faq.answer }}</div>
+              </el-collapse-item>
+            </el-collapse>
           </div>
         </div>
-        <div class="admission-section team-member">
-          <div class="admission-section__title">
-            Admission Team
-          </div>
-          <div class="admission-section__content">
-            <div class="member-cards">
-              <div class="member-card" v-for="(member,i) in members" :key="i">
-                <div class="member-card__avatar">
-                  <img :src="member.avatar" alt="">
-                </div>
-                <div class="member-card__information">
-                  <span>{{ member.information.title }}</span>
-                  <span>{{ member.information.content }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- ...existing code... -->
       </div>
     </div>
   </div>
@@ -70,6 +44,8 @@
 <script lang="ts">
 import {defineComponent, reactive, toRefs, computed} from 'vue'
 import {useI18n} from "vue-i18n";
+import 'element-plus/dist/index.css'
+import { ElCollapse, ElCollapseItem } from 'element-plus'
 
 export default defineComponent({
   name: "admission",
@@ -78,29 +54,37 @@ export default defineComponent({
 
     const videoUrl = 'https://website.xycloud.net.cn/video/Ulink27.mp4';
 
-    const linkList = computed(() => [
-      { label: 'admission.applicationguide.title', url: '' },
-      { label: 'admission.applicationguide.sub1', url: '' },
-      { label: 'admission.applicationguide.sub2', url: '' }
-    ]);
+
 
     const faqList = [
       {
-        role:'Q',
-        speak:'Which course is the best in IB?'
+        question: 'What is the admissions exam process?',
+        answer: 'Our admissions exam consists of a written test and an interview, held about one week apart. Only candidates who pass the written test are eligible for the interview. Approximately one week after the interview, results will be released. Those who pass will receive official admission offers.'
       },
       {
-        role:'W',
-        speak:'Psychology.'
+        question: 'Where can I register for the exam?',
+        answer: 'Please follow the instructions and register at the following website:https://www.ulink.cn/ru-xue-liu-cheng/'
       },
       {
-        role:'Q',
-        speak:'Which dormitory is the best?'
+        question: 'Where can I find the exam syllabus?',
+        answer: 'Please follow the official “Ulink Education” WeChat account and stay tuned for updates regarding the 2025 Fall admissions exam.'
       },
       {
-        role:'W',
-        speak:'2312.'
+        question: 'What documents do I need to bring to the exam?',
+        answer: 'You must print and bring your Admission Ticket along with your valid ID card.'
       },
+      {
+        question: 'Besides presenting documents, what are the entry procedures for the exam?',
+        answer: 'We will use facial recognition to verify candidate identity. Therefore, candidates must arrive at least 30 minutes before the exam and ensure that the ID number in the registration system is accurate.'
+      },
+      {
+        question: 'What stationery and supplies should I bring?',
+        answer: 'Please bring a black gel pen, a 2B pencil, a transparent stationery bag, and a transparent water bottle.'
+      },
+      {
+        question: 'Can I bring a calculator to the written exam?',
+        answer: 'Calculators are only permitted for the Mathematics (English version) exam.'
+      }
     ];
 
     const members = [
@@ -130,7 +114,6 @@ export default defineComponent({
     return {
       t,
       videoUrl,
-      linkList,
       faqList,
       members
     }
