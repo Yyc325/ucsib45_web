@@ -16,8 +16,8 @@
 								<!-- <img src="@/assets/images/layout/logo.png" alt="Logo" style="margin-right: 10px" /> -->
                 <!-- logo 暂时隐藏-->
 
-								<!-- <img src="https://website.xycloud.net.cn/images/logo.png" alt="Logo"
-                     style="margin-right: 10px"/> -->
+								<img src="https://website.xycloud.net.cn/images/UlinkLogo.png" alt="Logo"
+                     style="margin-right: 10px"/>
 								<span>UCS IB</span>
 							</span>
             </div>

@@ -7,7 +7,7 @@
                 </div>
                 <div class="login-container-left-content">
                     <div class="logo-container" @click="backHome">
-                        <img src="https://website.xycloud.net.cn/images/logo.png" alt="" />
+                        <img src="https://website.xycloud.net.cn/images/UlinkLogo.png" alt="" />
                     </div>
                     <div class="desc-container">
                         <h1>{{ t('login.title') }}</h1>

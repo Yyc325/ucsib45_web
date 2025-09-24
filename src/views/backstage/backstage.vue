@@ -8,7 +8,7 @@
 			<div class="i-layout-header">
 				<div class="i-layout-header-left" @click="router.push('/home')">
 					<div class="logo">
-						<img src="https://website.xycloud.net.cn/images/logo.png" alt="">
+						<img src="https://website.xycloud.net.cn/images/UlinkLogo.png" alt="">
 					</div>
 					<div class="name">{{ $t("backstage.title") }}</div>
 				</div>
