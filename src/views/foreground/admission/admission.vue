@@ -9,24 +9,15 @@
       <div class="admission-body">
         <div class="admission-section preview-video">
           <template v-if="videoUrl">
-            <video :src="videoUrl"></video>
-          </template>
-          <template v-else>
-            <div class="preview-video__empty">
-              <span>Video</span>
-            </div>
+            <video :src="videoUrl" controls></video>
           </template>
         </div>
         <div class="admission-section">
           <div class="admission-section__title">
-            Application Guidelines
+            {{ t('admission.applicationguide.title') }}
           </div>
           <div class="admission-section__content">
-            <ul class="link-list">
-              <li class="link-item" v-for="(link,i) in linkList" :key="i">
-                <a :href="link.url">{{link.label}}</a>
-              </li>
-            </ul>
+            {{ t('admission.applicationguide.sub1') }}
           </div>
         </div>
         <div class="admission-section faq">
@@ -34,108 +25,97 @@
             FAQ
           </div>
           <div class="admission-section__content">
-            <ul class="faq-list">
-              <li class="faq-item" v-for="(faq,i) in faqList" :key="i">
-                <span class="faq-item__role">{{faq.role}}:</span>
-                <span class="faq-item__content">{{faq.speak}}</span>
-              </li>
-            </ul>
-            <div class="online-consultation">
-              <a href="">Online Consultation</a>
-            </div>
+            <el-collapse accordion>
+              <el-collapse-item
+                v-for="(faq, i) in faqList"
+                :key="i"
+                :title="faq.question"
+              >
+                <div>{{ faq.answer }}</div>
+              </el-collapse-item>
+            </el-collapse>
           </div>
         </div>
-        <div class="admission-section team-member">
-          <div class="admission-section__title">
-            Admission Team
-          </div>
-          <div class="admission-section__content">
-            <div class="member-cards">
-              <div class="member-card" v-for="(member,i) in members" :key="i">
-                <div class="member-card__avatar">
-                  <img :src="member.avatar" alt="">
-                </div>
-                <div class="member-card__information">
-                  <span>{{ member.information.title }}</span>
-                  <span>{{ member.information.content }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- ...existing code... -->
       </div>
     </div>
   </div>
 </template>
 <script lang="ts">
-import {defineComponent, reactive, toRefs} from 'vue'
+import {defineComponent, reactive, toRefs, computed} from 'vue'
 import {useI18n} from "vue-i18n";
+import 'element-plus/dist/index.css'
+import { ElCollapse, ElCollapseItem } from 'element-plus'
 
 export default defineComponent({
   name: "admission",
   setup(){
-    const {t} = useI18n()
-    const state = reactive({
-      videoUrl:'',
-      linkList:[
-        {
-          label:'Application Material',
-          url:''
-        },
-        {
-          label:'Time Node',
-          url:''
-        },
-        {
-          label:'Expense Breakdown',
-          url:''
+    const { t } = useI18n();
+
+    const videoUrl = 'https://website.xycloud.net.cn/video/Ulink27.mp4';
+
+
+
+    const faqList = [
+      {
+        question: 'What is the admissions exam process?',
+        answer: 'Our admissions exam consists of a written test and an interview, held about one week apart. Only candidates who pass the written test are eligible for the interview. Approximately one week after the interview, results will be released. Those who pass will receive official admission offers.'
+      },
+      {
+        question: 'Where can I register for the exam?',
+        answer: 'Please follow the instructions and register at the following website:https://www.ulink.cn/ru-xue-liu-cheng/'
+      },
+      {
+        question: 'Where can I find the exam syllabus?',
+        answer: 'Please follow the official “Ulink Education” WeChat account and stay tuned for updates regarding the 2025 Fall admissions exam.'
+      },
+      {
+        question: 'What documents do I need to bring to the exam?',
+        answer: 'You must print and bring your Admission Ticket along with your valid ID card.'
+      },
+      {
+        question: 'Besides presenting documents, what are the entry procedures for the exam?',
+        answer: 'We will use facial recognition to verify candidate identity. Therefore, candidates must arrive at least 30 minutes before the exam and ensure that the ID number in the registration system is accurate.'
+      },
+      {
+        question: 'What stationery and supplies should I bring?',
+        answer: 'Please bring a black gel pen, a 2B pencil, a transparent stationery bag, and a transparent water bottle.'
+      },
+      {
+        question: 'Can I bring a calculator to the written exam?',
+        answer: 'Calculators are only permitted for the Mathematics (English version) exam.'
+      }
+    ];
+
+    const members = [
+      {
+        avatar:'https://website.xycloud.net.cn/images/user-avatar.jpg',
+        information:{
+          title:'Information',
+          content:'xxxxxxxxxxx'
         }
-      ],
-      faqList:[
-        {
-          role:'Q',
-          speak:'Which course is the best in IB?'
-        },
-        {
-          role:'W',
-          speak:'Psychology.'
-        },
-        {
-          role:'Q',
-          speak:'Which dormitory is the best?'
-        },
-        {
-          role:'W',
-          speak:'2312.'
-        },
-      ],
-      members:[
-        {
-          avatar:'https://website.xycloud.net.cn/images/user-avatar.jpg',
-          information:{
-            title:'Information',
-            content:'xxxxxxxxxxx'
-          }
-        },
-        {
-          avatar:'https://website.xycloud.net.cn/images/user-avatar.jpg',
-          information:{
-            title:'Information',
-            content:'xxxxxxxxxxx'
-          }
-        },
-        {
-          avatar:'https://website.xycloud.net.cn/images/user-avatar.jpg',
-          information:{
-            title:'Information',
-            content:'xxxxxxxxxxx'
-          }
+      },
+      {
+        avatar:'https://website.xycloud.net.cn/images/user-avatar.jpg',
+        information:{
+          title:'Information',
+          content:'xxxxxxxxxxx'
         }
-      ]
-    })
+      },
+      {
+        avatar:'https://website.xycloud.net.cn/images/user-avatar.jpg',
+        information:{
+          title:'Information',
+          content:'xxxxxxxxxxx'
+        }
+      }
+    ];
+
     return {
       t,
-      ...toRefs(state)
+      videoUrl,
+      faqList,
+      members
     }
   }
 })

@@ -20,8 +20,20 @@
       .admission-body {
         width: 100%;
         .preview-video{
-          height: 196px !important;
+          position: relative;
+          width: 100%;
+          padding-top: 56.25%; // 16:9 aspect ratio
           margin-bottom: 24px !important;
+          video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            object-fit: cover;
+          }
           .preview-video__empty{
             font-size: 32px !important;
           }
