@@ -20,14 +20,14 @@ const localRoutes = [
                 },
                 component: ComponentCanstants["HOME_PAGE"],
             },
-            // {
-            //     path: "students",
-            //     name: "Students",
-            //     meta: {
-            //         title: "UCSIB",
-            //     },
-            //     component: ComponentCanstants["STUDENTS_PAGE"],
-            // },
+            {
+                path: "students",
+                name: "Students",
+                meta: {
+                    title: "UCSIB",
+                },
+                component: ComponentCanstants["STUDENTS_PAGE"],
+            },
             {
                 path: "news",
                 name: "News",
@@ -56,9 +56,17 @@ const localRoutes = [
                 path: "admission",
                 name: "Admission",
                 meta: {
-                    title: "UCSIB",
+                    title: "Admission",
                 },
                 component: ComponentCanstants["ADMISSION_PAGE"],
+            },
+            {
+                path: "campus",
+                name: "Campus",
+                meta: {
+                    title: "Campus",
+                },
+                component: ComponentCanstants["CAMPUS_PAGE"],
             },
             {
                 path: "article/:id?",

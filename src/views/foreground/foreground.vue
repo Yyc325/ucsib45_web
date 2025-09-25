@@ -115,10 +115,7 @@
         </div>
       </div>
       <div class="i-layout-footer">
-        <div class="i-layout-footer__record">
-          <img src="https://website.xycloud.net.cn/images/ip_beian.png" alt="">
-          <a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2025116303号-1</a>
-        </div>
+        <page-footer></page-footer>
       </div>
     </div>
   </div>
@@ -133,6 +130,7 @@ import {Search} from "@element-plus/icons-vue";
 import {router} from "@/router";
 import en from "@/language/en";
 import {exitAfter} from "../backstage/account/account";
+import PageFooter from "@/views/foreground/aaComponents/PageFooter/PageFooter.vue";
 
 const {locale, t} = useI18n();
 
@@ -208,7 +206,7 @@ const primaryNavs = computed(() => {
     },
     {
       label: t("primaryNav.campusLife"),
-      name: "",
+      name: "Campus",
     },
     {
       label: t("primaryNav.resource"),

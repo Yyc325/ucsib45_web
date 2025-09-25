@@ -262,26 +262,10 @@ $headerHeight: 50px;
     display: flex ;
     align-items: center;
     justify-content: center;
-    height: 48px;
+    width: 100%;
     background: #fff;
-    .i-layout-footer__record{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
-      img{
-        width: 24px;
-        height: 24px;
-        margin-right: 8px;
-      }
-      a{
-        font-size: 12px;
-        line-height: 24px;
-        &:hover{
-          text-decoration: underline;
-          color: #1d2129;
-        }
-      }
+    .i-layout-footer__content{
+      width: 100%;
     }
   }
 }
