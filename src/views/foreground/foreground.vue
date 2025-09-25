@@ -16,7 +16,7 @@
 								<!-- <img src="@/assets/images/layout/logo.png" alt="Logo" style="margin-right: 10px" /> -->
                 <!-- logo 暂时隐藏-->
 
-								<img src="https://website.xycloud.net.cn/images/UlinkLogo.png" alt="Logo"
+								<img src="https://www.ulink.cn/wp-content/uploads/2024/11/cropped-Corporate-logo-集团标识a-150x150.png" alt="Logo"
                      style="margin-right: 10px"/>
 								<span>UCS IB</span>
 							</span>

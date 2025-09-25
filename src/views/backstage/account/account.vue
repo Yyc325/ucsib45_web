@@ -7,7 +7,7 @@
                 </div>
                 <div class="login-container-left-content">
                     <div class="logo-container" @click="backHome">
-                        <img src="https://website.xycloud.net.cn/images/UlinkLogo.png" alt="" />
+                        <img src="https://www.ulink.cn/wp-content/uploads/2024/11/cropped-Corporate-logo-集团标识a-150x150.png" alt="" />
                     </div>
                     <div class="desc-container">
                         <h1>{{ t('login.title') }}</h1>

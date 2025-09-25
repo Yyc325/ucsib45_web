@@ -8,7 +8,7 @@
 			<div class="i-layout-header">
 				<div class="i-layout-header-left" @click="router.push('/home')">
 					<div class="logo">
-						<img src="https://website.xycloud.net.cn/images/UlinkLogo.png" alt="">
+						<img src="https://www.ulink.cn/wp-content/uploads/2024/11/cropped-Corporate-logo-集团标识a-150x150.png" alt="">
 					</div>
 					<div class="name">{{ $t("backstage.title") }}</div>
 				</div>
