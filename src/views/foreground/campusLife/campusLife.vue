@@ -95,7 +95,7 @@ export default defineComponent({
         },
         {
           cover: "https://website.xycloud.net.cn/images/arts_culture_2.jpg",
-          title: 'Dramatic Drama',
+          title: 'Drama',
           desc: "Come see the achievements of IB learners in this annual drama show"
         },
         {
