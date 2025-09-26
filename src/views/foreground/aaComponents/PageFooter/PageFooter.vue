@@ -9,7 +9,7 @@
         <div class="spline"></div>
         <div class="page-footer-quick-item">About us</div>
         <div class="spline"></div>
-        <div class="page-footer-quick-item">Enrolment information</div>
+        <div class="page-footer-quick-item">Enrollment information</div>
       </div>
       <div class="page-footer-logo">
         <div class="page-footer-logo__image">
