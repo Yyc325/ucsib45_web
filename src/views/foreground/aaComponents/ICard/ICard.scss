@@ -37,25 +37,14 @@
       height: 86px;
     }
     .i-card-content{
-      padding: 10px;
       .i-card-title{
-        font-size: 14px;
-        display: -webkit-box;
-        overflow: hidden;
-        -webkit-line-clamp: 2;
-        /*! autoprefixer: ignore next */
-        -webkit-box-orient: vertical;
+        font-size: 18px;
         margin-bottom: 8px;
 
       }
       .i-card-desc{
-        font-size: 12px;
-        line-height: 16px;
-        display: -webkit-box;
-        overflow: hidden;
-        -webkit-line-clamp:3;
-        /*! autoprefixer: ignore next */
-        -webkit-box-orient: vertical;
+        font-size: 16px;
+        line-height: 20px;
       }
     }
   }

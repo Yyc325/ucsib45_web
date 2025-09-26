@@ -26,7 +26,7 @@
                 <!-- <div class="gateway-nav&#45;&#45;label">Information for:</div> -->
                 <ul class="menu">
 <!--                  暂时将空白页隐藏 @click="jumpTo(item.name)"-->
-                  <li class="menu-item" v-for="item in barMenu" :key="item.name">
+                  <li class="menu-item" v-for="item in barMenu" :key="item.name" @click="jumpTo(item.name)">
                     {{item.label }}
                   </li>
                 </ul>
@@ -88,7 +88,7 @@
                   <div class="collapse-menu__content" :class="{'is-active':collapseVisible}">
                     <ul class="collapse-menu-list">
 <!--                      暂时将空白页隐藏  @click="jumpTo(item.name)"-->
-                      <li class="menu-item" v-for="item in barMenu" :key="item.name" >
+                      <li class="menu-item" v-for="item in barMenu" :key="item.name" @click="jumpTo(item.name)">
                         {{item.label }}
                       </li>
                     </ul>
@@ -226,6 +226,7 @@ const primaryNavs = computed(() => {
 })
 // 页面跳转
 const jumpTo = (name: string) => {
+  console.log(name)
   router.push({
     name: name,
   });

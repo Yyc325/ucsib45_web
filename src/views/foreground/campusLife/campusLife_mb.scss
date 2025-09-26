@@ -22,11 +22,15 @@
         width: 100%;
       }
       .card-list{
+        flex-direction: column;
         width:100%;
         :deep(.i-card) {
           flex: 1;
-          margin-right: 24px;
-
+          margin-right: 0;
+          margin-bottom: 24px;
+          .i-card-cover{
+            height: 236px;
+          }
           &:last-child {
             margin-right: 0;
           }

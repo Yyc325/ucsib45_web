@@ -64,9 +64,17 @@ const localRoutes = [
                 path: "campus",
                 name: "Campus",
                 meta: {
-                    title: "Campus",
+                    title: "Campus Life",
                 },
                 component: ComponentCanstants["CAMPUS_PAGE"],
+            },
+            {
+                path: "students",
+                name: "Students",
+                meta: {
+                    title: "students",
+                },
+                component: ComponentCanstants["STUDENTS_PAGE"],
             },
             {
                 path: "article/:id?",
