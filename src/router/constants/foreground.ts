@@ -5,7 +5,6 @@ const HOME_PAGE = () => import("@/views/foreground/home/home.vue");
 // 学生
 const STUDENTS_PAGE = () => import("@/views/foreground/students/students.vue");
 // 校友
-const ALUMNI_PAGE = () => import("@/views/foreground/alumni/alumni.vue");
 // 新闻
 const NEWS_PAGE = () => import("@/views/foreground/news/news.vue");
 // 关于

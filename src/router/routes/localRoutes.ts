@@ -29,14 +29,6 @@ const localRoutes = [
                 component: ComponentCanstants["STUDENTS_PAGE"],
             },
             {
-                path: "alumni",
-                name: "Alumni",
-                meta: {
-                    title: "UCSIB",
-                },
-                component: ComponentCanstants["ALUMNI_PAGE"],
-            },
-            {
                 path: "news",
                 name: "News",
                 meta: {

@@ -15,9 +15,6 @@ export enum PageEnum {
   // 教师页
   BASE_STUDENTS = "/faculty",
   BASE_STUDENTS_NAME = "faculty",
-  //校友页
-  BASE_ALUMNI = "/alumni",
-  BASE_ALUMNI_NAME = "alumni",
 }
 // 免登 页面组件
 // 免登 页面组件
