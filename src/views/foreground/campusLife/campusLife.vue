@@ -57,6 +57,12 @@
         </div>
       </div>
     </div>
+    <div class="campus-life-topbar">
+      <div class="campus-life-topbar-line">What's Happening at UCSIB</div>
+      <button class="about-btn" @click="$router.push('/news')">
+        News & Events on Campus
+      </button>
+    </div>
   </ContentLayout>
 </template>
 

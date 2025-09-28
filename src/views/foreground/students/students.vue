@@ -3,18 +3,18 @@
     <div class="students-header">
       <div class="students-header-container">
         <div class="students-header-inner">
-
           <div class="students-header-section">
             <div class="students-header__title">Gateway for students</div>
-            <div class="students-header__desc">
-              Empowering global citizens through the International Baccalaureate program
-              Discover opportunities,connect with peers, and shape your future.
-            </div>
           </div>
           <div class="students-header-section">
-            <div class="students-header-more">Explore more</div>
+            <div class="students-header-more" @click="$router.push('/about')">Explore more</div>
           </div>
         </div>
+      </div>
+      <!-- 蓝色块，独立副标题 -->
+      <div class="students-header-descbar">
+        Empowering global citizens through the International Baccalaureate program<br>
+        Discover opportunities, connect with peers, and shape your future.
       </div>
     </div>
     <ContentLayout>
@@ -209,7 +209,8 @@ export default defineComponent({
         },
         {
           date: '2024',
-          background: '#221C5A'
+          background: '#221C5A',
+          videoUrl:'https://website.xycloud.net.cn/video/Ulink27.mp4'
         },
         {
           date: '2025',
