@@ -29,14 +29,6 @@ export const baseRoutes = [
   //   },
   // },
   // {
-  //   path: "/families",
-  //   name: "families",
-  //   component: ComponentCanstants["FAMILIES"],
-  //   meta: {
-  //     title: "家长页",
-  //   },
-  // },
-  // {
   //   path: "/alumni",
   //   name: "alumni",
   //   component: ComponentCanstants["ALUMNI"],
