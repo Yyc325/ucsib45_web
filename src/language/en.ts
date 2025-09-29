@@ -7,7 +7,6 @@ export default {
   },
   header: {
     student: "Students",
-    faculty: "Faculty & Staff",
     alumni: "Alumni",
     search: "Search",
     login: "Log In",
