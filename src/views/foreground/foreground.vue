@@ -7,7 +7,7 @@
 			}">
     <div class="i-layout-wrap" ref="containerRef">
       <div class="i-layout-header" :style="{
-				minHeight:router.currentRoute.value.name=='Home'?'100vh':router.currentRoute.value.meta.hasCover?'50px':'170px',
+				minHeight:router.currentRoute.value.name=='Home'?'100vh':router.currentRoute.value.meta.hasCover?'3.125rem':'10.625rem',
 			}">
         <div class="brand-bar" :class="{ 'is-chinese': locale === 'zh' }">
           <div class="brand-bar__wrapper">

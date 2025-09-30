@@ -87,6 +87,15 @@ const localRoutes = [
                 component: ComponentCanstants["COMMUNITY_PAGE"],
             },
             {
+                path: "alumni",
+                name: "Alumni",
+                meta: {
+                    title: "Alumni",
+                    hasCover:true
+                },
+                component: ComponentCanstants["ALUMNI_PAGE"],
+            },
+            {
                 path: "article/:id?",
                 name: "Article",
                 meta: {

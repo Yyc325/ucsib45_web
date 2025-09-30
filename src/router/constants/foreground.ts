@@ -17,8 +17,10 @@ const ADMISSION_PAGE = ()=> import("@/views/foreground/admission/admission.vue")
 const ARTICLE_PAGE = ()=> import("@/views/foreground/articleDisplay/articleDisplay.vue")
 // 校园生活
 const CAMPUS_PAGE = ()=> import("@/views/foreground/campusLife/campusLife.vue")
-// 校园生活
+// 社区
 const COMMUNITY_PAGE = ()=> import("@/views/foreground/community/community.vue")
+// 校园生活
+const ALUMNI_PAGE = ()=> import("@/views/foreground/alumni/alumni.vue")
 
 export default {
   FOREGROUND_LAYOUT,
@@ -30,5 +32,6 @@ export default {
   ADMISSION_PAGE,
   ARTICLE_PAGE,
   CAMPUS_PAGE,
-  COMMUNITY_PAGE
+  COMMUNITY_PAGE,
+  ALUMNI_PAGE
 };
