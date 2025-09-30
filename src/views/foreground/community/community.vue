@@ -164,146 +164,146 @@ export default defineComponent({
           author: 'XXX',
           avatar: "",
           style: {
-            top:'60px',
-            left:'60px',
-            width: "268px",
-            height: "224px",
+            top:'3.75rem',
+            left:'3.75rem',
+            width: "16.75rem",
+            height: "14rem",
             background: "#E5C8C8",
             rotate:"10deg"
           },
           dotStyle: {
-            width:'16px',
-            height:'16px'
+            width:'1rem',
+            height:'1rem'
           }
         },
         {
           author: 'XXX',
           avatar: "",
           style: {
-            top:'222px',
-            left:'224px',
-            width: "242px",
-            height: "204px",
+            top:'13.875rem',
+            left:'14rem',
+            width: "15.125rem",
+            height: "12.75",
             background: "#8899BE",
             rotate:"-15deg"
           },
           dotStyle: {
-            width:'8px',
-            height:'8px'
+            width:'0.5rem',
+            height:'0.5rem'
           }
         },
         {
           author: 'XXX',
           avatar: "",
           style: {
-            top:'360px',
-            left:'60px',
-            width: "268px",
-            height: "224px",
+            top:'22.5rem',
+            left:'3.75rem',
+            width: "16.75rem",
+            height: "14rem",
             background: "#D3B4B4",
             rotate:"8deg",
-            borderRadius:'24px'
+            borderRadius:'1.5rem'
           },
           dotStyle: {
-            width:'12px',
-            height:'12px'
+            width:'0.75rem',
+            height:'0.75rem'
           }
         },
         {
           author: 'XXX',
           avatar: "",
           style: {
-            top:'80px',
-            left:'460px',
-            width: "268px",
-            height: "204px",
+            top:'5rem',
+            left:'28.75rem',
+            width: "16.75rem",
+            height: "12.75rem",
             background: "#D6B3B3",
             rotate:"2deg"
           },
           dotStyle: {
-            width:'16px',
-            height:'16px'
+            width:'1rem',
+            height:'1rem'
           }
         },
         {
           author: 'XXX',
           avatar: "",
           style: {
-            top:'360px',
-            left:'460px',
-            width: "268px",
-            height: "224px",
+            top:'22.5rem',
+            left:'28.75rem',
+            width: "16.75rem",
+            height: "14rem",
             background: "#8499BA",
             rotate:"-2deg"
           },
           dotStyle: {
-            width:'16px',
-            height:'16px'
+            width:'1rem',
+            height:'1rem'
           }
         },
         {
           author: 'XXX',
           avatar: "",
           style: {
-            top:'214px',
-            left:'684px',
-            width: "326px",
-            height: "184px",
+            top:'13.375rem',
+            left:'42.75rem',
+            width: "20.375rem",
+            height: "11.5rem",
             background: "#92ABCC",
             rotate:"-8deg",
-            borderRadius: "48px"
+            borderRadius: "3rem"
           },
           dotStyle: {
-            width:'16px',
-            height:'16px'
+            width:'1rem',
+            height:'1rem'
           }
         },
         {
           author: 'XXX',
           avatar: "",
           style: {
-            top:'398px',
-            left:'860px',
-            width: "266px",
-            height: "184px",
+            top:'24.875rem',
+            left:'53.75rem',
+            width: "16.625rem",
+            height: "11.5rem",
             background: "#E3C4C4",
             rotate:"10deg"
           },
           dotStyle: {
-            width:'16px',
-            height:'16px'
+            width:'1rem',
+            height:'1rem'
           }
         },
         {
           author: 'XXX',
           avatar: "",
           style: {
-            top:'392px',
-            left:'1096px',
-            width: "268px",
-            height: "224px",
+            top:'24.5rem',
+            left:'68.5rem',
+            width: "16.75rem",
+            height: "14rem",
             background: "#8194B9",
             rotate:"-10deg"
           },
           dotStyle: {
-            width:'16px',
-            height:'16px'
+            width:'1rem',
+            height:'1rem'
           }
         },
         {
           author: 'XXX',
           avatar: "",
           style: {
-            top:'72px',
-            left:'996px',
-            width: "368px",
-            height: "296px",
+            top:'4.5rem',
+            left:'62.25rem',
+            width: "23rem",
+            height: "18.5rem",
             background: "#E1CECE",
             rotate:"8deg"
           },
           dotStyle: {
-            width:'16px',
-            height:'16px'
+            width:'1rem',
+            height:'1rem'
           }
         },
       ]
