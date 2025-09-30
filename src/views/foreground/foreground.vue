@@ -7,7 +7,7 @@
 			}">
     <div class="i-layout-wrap" ref="containerRef">
       <div class="i-layout-header" :style="{
-				minHeight:router.currentRoute.value.name=='Home'?'100vh':'100px',
+				minHeight:router.currentRoute.value.name=='Home'?'100vh':router.currentRoute.value.meta.hasCover?'50px':'170px',
 			}">
         <div class="brand-bar" :class="{ 'is-chinese': locale === 'zh' }">
           <div class="brand-bar__wrapper">
@@ -99,6 +99,11 @@
           </div>
         </div>
         <div class="menu-primary-nav-container" :class="{ 'is-top': isTop || router.currentRoute.value.name!='Home' }">
+          <div class="page-meta-info">
+            <div class="page-title">UCS IB</div>
+            <div class="line"></div>
+            <div class="page-name">{{ router.currentRoute.value.meta.title }}</div>
+          </div>
           <ul class="menu">
             <li class="menu-item" v-for="item in primaryNavs" :key="item.label" @click="jumpTo(item.name)">
               {{ item.label }}
@@ -204,7 +209,7 @@ const primaryNavs = computed(() => {
     },
     {
       label: t("primaryNav.community"),
-      name: "",
+      name: "Community",
     },
     {
       label: t("primaryNav.admission"),

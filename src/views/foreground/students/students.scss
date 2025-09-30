@@ -9,8 +9,6 @@
     height: 1140px;
     background: url("https://website.xycloud.net.cn/images/students.jpg") no-repeat  center center;
     background-size: 100% auto;
-    margin-bottom: 96px;
-    
     .students-header-container{
       width: 100%;
       height: 100%;
@@ -47,7 +45,22 @@
 
       }
     }
-    
+
+  }
+  .students-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 220px;
+    color: #fff;
+    font-size: 36px;
+    line-height: 48px;
+    background-color: #00002D;
+    margin-bottom: 96px;
+    .students-tip{
+      width: 1440px;
+    }
   }
   .student-section{
     width: 100%;
@@ -84,15 +97,20 @@
     .student-section-content{
       width: 100%;
       .develop-cards{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4,calc(calc(100% - 300px)/4));
+        grid-gap: 100px;
         justify-content: space-between;
         width: 100%;
         .develop-card{
+          flex: 1;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding: 32px 0 16px;
+          padding: 32px 0 32px;
+          box-shadow: 0 5px 10px 1px rgba(0,0,0,0.4);
+          border-radius: 8px;
           .develop-card-icon{
             width: 64px;
             margin-bottom: 16px;
@@ -107,6 +125,7 @@
             line-height: 28px;
             margin-bottom: 24px;
           }
+
           .develop-card-todos{
             display: flex;
             flex-direction: column;
@@ -114,7 +133,7 @@
             .develop-card-todo{
               position: relative;
               font-size: 16px;
-              line-height: 18px;
+              line-height: 28px;
               margin-bottom: 10px;
               color: #4A5361;
               padding-left: 16px;
@@ -212,7 +231,7 @@
 .students-header-descbar {
   font-family: 'Jacques Francois';
   position: relative;
-  width: 1000vw;
+  width: 100vw;
   left: 50%;
   transform: translateX(-50%);
   background: #00002d;
@@ -225,6 +244,6 @@
   box-shadow: 0 8px 32px rgba(10,20,70,0.08);
   z-index: 2;
   line-height: 1.7;
-  margin-top: -60px; 
-  margin-bottom: 96px; 
+  margin-top: -60px;
+  margin-bottom: 96px;
 }

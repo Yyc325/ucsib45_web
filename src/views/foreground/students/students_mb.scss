@@ -3,7 +3,6 @@
   .students{
     .students-header{
       height: 256px;
-      margin-bottom: 32px;
       .students-header-container{
         padding: 32px 0 24px;
         .students-header-inner{
@@ -28,6 +27,12 @@
         }
       }
     }
+    .students-center{
+      font-size: 12px;
+      line-height: 16px;
+      height: 96px;
+      padding: 0 24px;
+    }
     .student-section{
       margin-bottom: 24px;
       .student-section-header{
@@ -49,8 +54,12 @@
       }
       .student-section-content{
         .develop-cards{
-          flex-direction: column;
+          grid-template-columns:100%;
+          grid-gap: 24px;
+          place-items: center;
           .develop-card{
+            width: 240px;
+            min-height: 260px;
             padding: 8px;
             .develop-card-icon{
               width: 32px;

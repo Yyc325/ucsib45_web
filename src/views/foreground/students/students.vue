@@ -11,10 +11,10 @@
           </div>
         </div>
       </div>
-      <!-- 蓝色块，独立副标题 -->
-      <div class="students-header-descbar">
-        Empowering global citizens through the International Baccalaureate program<br>
-        Discover opportunities, connect with peers, and shape your future.
+    </div>
+    <div class="students-center">
+      <div class="students-tip">
+        Empowering global citizens through the international baccalaureate program discover opportunities,connect with peers,and shape your future.
       </div>
     </div>
     <ContentLayout>

@@ -70,7 +70,12 @@
       }
       .menu-primary-nav-container{
         padding:0;
+        height: 50px;
+        .page-meta-info{
+          display: none;
+        }
         .menu{
+
           .menu-item{
             font-size: 10px;
             white-space: nowrap;

@@ -6,17 +6,40 @@
   --el-text-color-regular: #1d2129 !important;
   font-size: 14px;
   --el-font-size-base: 14px;
-  font-family: "Times New Roman";
-  --container-width:1500px
+  font-family: 'Lora';
+  --container-width: 1500px
 }
+
 html,
 body {
   font-size: 16px;
 }
+
 html {
   overflow: hidden;
 }
 
 #app {
   height: 100vh;
+}
+
+/* 定义自定义字体 */
+@font-face {
+  font-family: 'LaBelleAurore';
+  src: url('/fonts/La-Belle-Aurore/La-Belle-Aurore-1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 定义自定义字体 */
+@font-face {
+  font-family: 'Lora';
+  src: url('/fonts/Lora/Lora-Medium-5.ttf') format('truetype'),
+      url('/fonts/Lora/Lora-BoldItalic-3.ttf') format('truetype'),
+      url('/fonts/Lora/Lora-Italic-4.ttf') format('truetype'),
+      url('/fonts/Lora/Lora-Bold-2.ttf') format('truetype'),
+      url('/fonts/Lora/Lora-MediumItalic-6.ttf') format('truetype'),
+      url('/fonts/Lora/Lora-Regular-7.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
