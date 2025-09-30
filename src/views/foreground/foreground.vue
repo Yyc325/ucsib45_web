@@ -183,16 +183,8 @@ const barMenu = computed(() => {
       name:"Students",
     },
     {
-      label:t("header.faculty"),
-      name:"faculty",
-    },
-    {
-      label:t("header.families"),
-      name:"families",
-    },
-    {
       label:t("header.alumni"),
-      name:"alumni",
+      name:"Alumni",
     }
   ]
 })

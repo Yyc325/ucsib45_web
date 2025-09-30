@@ -7,8 +7,6 @@ export default {
     // 用于顶部导航栏
     header: {
         student: "学生",
-        faculty: "教师职工",
-        families: "家庭",
         alumni: "校友",
         search: "搜索",
         login: "登录",

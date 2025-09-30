@@ -57,6 +57,12 @@
         </div>
       </div>
     </div>
+    <div class="campus-life-topbar">
+      <div class="campus-life-topbar-line">What's Happening at UCSIB</div>
+      <button class="about-btn" @click="$router.push('/news')">
+        News & Events on Campus
+      </button>
+    </div>
   </ContentLayout>
 </template>
 
@@ -95,7 +101,7 @@ export default defineComponent({
         },
         {
           cover: "https://website.xycloud.net.cn/images/arts_culture_2.jpg",
-          title: 'Dramatic Drama',
+          title: 'Drama',
           desc: "Come see the achievements of IB learners in this annual drama show"
         },
         {

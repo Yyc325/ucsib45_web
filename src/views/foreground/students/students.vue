@@ -3,18 +3,18 @@
     <div class="students-header">
       <div class="students-header-container">
         <div class="students-header-inner">
-
           <div class="students-header-section">
             <div class="students-header__title">Gateway for students</div>
-            <div class="students-header__desc">
-              Empowering global citizens through the International Baccalaureate program
-              Discover opportunities,connect with peers, and shape your future.
-            </div>
           </div>
           <div class="students-header-section">
-            <div class="students-header-more">Explore more</div>
+            <div class="students-header-more" @click="$router.push('/about')">Explore more</div>
           </div>
         </div>
+      </div>
+      <!-- 蓝色块，独立副标题 -->
+      <div class="students-header-descbar">
+        Empowering global citizens through the International Baccalaureate program<br>
+        Discover opportunities, connect with peers, and shape your future.
       </div>
     </div>
     <ContentLayout>
@@ -77,7 +77,12 @@
         <div class="student-section-content">
           <div class="history-carousel">
             <div class="history-carousel-display" :style="{background:currentHistory.background}">
-
+              <video
+                v-if="currentHistory.videoUrl"
+                :src="currentHistory.videoUrl"
+                controls
+                style="width: 100%; height: 100%; border-radius: 16px; background: #000;"
+              ></video>
             </div>
             <div class="history-carousel-trigger">
               <div class="history-carousel-trigger-item" v-for="history in historicalLine" :key="history.date"
@@ -187,20 +192,25 @@ export default defineComponent({
       ],
       currentHistory: {
         date: '2019',
-        background: '#010736'
+        background: '#010736',
+        videoUrl: 'https://website.xycloud.net.cn/video/%5BMV%5DIB%20is%20so%20diffucult%EF%BC%88IB%E5%A5%BD%E9%9A%BE%EF%BC%89.mp4'
       },
       historicalLine: [
         {
           date: '2019',
-          background: '#010736'
+          background: '#010736',
+          videoUrl: 'https://website.xycloud.net.cn/video/%5BMV%5DIB%20is%20so%20diffucult%EF%BC%88IB%E5%A5%BD%E9%9A%BE%EF%BC%89.mp4'
         },
         {
           date: '2020',
-          background: '#121B52'
+          background: '#121B52',
+          videoUrl: 'https://website.xycloud.net.cn/video/%E9%A2%86%E7%A7%91%E4%B8%8A%E6%B5%B72020%E5%B1%8APreIB%E8%87%AA%E5%88%B6%E9%9F%B3%E4%B9%90%E7%9F%AD%E7%89%87%E3%80%8AIB%E5%A5%BD%E9%9A%BE%E3%80%8B.mp4'
+
         },
         {
           date: '2024',
-          background: '#221C5A'
+          background: '#221C5A',
+          videoUrl:'https://website.xycloud.net.cn/video/Ulink27.mp4'
         },
         {
           date: '2025',

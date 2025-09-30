@@ -76,7 +76,7 @@
             <p class="about-card-item__info">
               <span class="about-card-item__image">
                 <span class="about-card-item__image-show">
-                  <img src="https://website.xycloud.net.cn/images/about5.png"/>
+                  <img src="https://website.xycloud.net.cn/images/about0.png"/>
                 <span class="about-card-item__image-description">
                   {{ t('aboutpage.Community.more') }}
                 </span>
