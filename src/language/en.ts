@@ -66,8 +66,7 @@ export default {
   admission:{
     applicationguide:{
       title:"Application Guidelines",
-      sub1:"Our school’s admissions process includes both a written exam and an interview. Applicants should follow the official enrollment steps provided on https://www.ulink.cn/ru-xue-liu-cheng/ to register, submit documents, and pay fees. Please check the website regularly for exam details, important dates, and admission updates.",
-    }
+      sub1: "Our school’s admissions process includes both a written exam and an interview. Applicants should follow the official enrollment steps provided on <a href='https://www.ulink.cn/ru-xue-liu-cheng/' target='_blank'>this page</a> to register, submit documents, and pay fees. Please check the website regularly for exam details, important dates, and admission updates."    }
   },
   aboutpage:{
     Title:{

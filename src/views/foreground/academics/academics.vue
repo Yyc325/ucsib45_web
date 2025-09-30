@@ -63,47 +63,21 @@
         </section>
         <section class="academics-section ibdp-core">
           <div class="academics-section__title">{{t('foreground.academics.course.ibdpCore')}}</div>
-          <div class="academics-section__body">
-            <div class="ibdp-core-box">
-              <div class="ibdp-core-node">CAS</div>
-              <p class="ibdp-core-text">{{t('academics.IBDPcoreTopics.CASdescription')}}</p>
-              <div class="ibdp-core-node items-end">TOK</div>
-              <p class="ibdp-core-text">{{t('academics.IBDPcoreTopics.TOKdescription')}}</p>
-              <div class="ibdp-core-node">EE</div>
-              <p class="ibdp-core-text">{{t('academics.IBDPcoreTopics.EEdescription')}}</p>
+          <div class="academics-section__body ibdp-core-cards">
+            <div class="ibdp-core-card">
+              <div class="ibdp-core-icon">CAS</div>
+              <div class="ibdp-core-title">CAS</div>
+              <div class="ibdp-core-text">{{ t('academics.IBDPcoreTopics.CASdescription') }}</div>
             </div>
-          </div>
-        </section>
-        <section class="academics-section pre-ib">
-          <div class="academics-section__title">{{t('foreground.academics.course.preIb')}}</div>
-          <div class="academics-section__body">
-            <div class="academics-section__article">
-              <p class="article-content">
-                Brief description of this pageBrief description of this page<br />
-                Brief description of this pageBrief description of this page<br />
-                Brief description of this pageBrief description of this page<br />
-                Brief description of this pageBrief description of this page<br />
-              </p>
-              <div class="image-cards">
-                <div class="image-card">
-                  <img src="https://website.xycloud.net.cn/images/empty-image.webp" alt="">
-                </div>
-                <div class="image-card">
-                  <img src="https://website.xycloud.net.cn/images/empty-image.webp" alt="">
-                </div>
-                <div class="image-card">
-                  <img src="https://website.xycloud.net.cn/images/empty-image.webp" alt="">
-                </div>
-                <div class="image-card">
-                  <img src="https://website.xycloud.net.cn/images/empty-image.webp" alt="">
-                </div>
-                <div class="image-card">
-                  <img src="https://website.xycloud.net.cn/images/empty-image.webp" alt="">
-                </div>
-                <div class="image-card">
-                  <img src="https://website.xycloud.net.cn/images/empty-image.webp" alt="">
-                </div>
-              </div>
+            <div class="ibdp-core-card">
+              <div class="ibdp-core-icon">TOK</div>
+              <div class="ibdp-core-title">TOK</div>
+              <div class="ibdp-core-text">{{ t('academics.IBDPcoreTopics.TOKdescription') }}</div>
+            </div>
+            <div class="ibdp-core-card">
+              <div class="ibdp-core-icon">EE</div>
+              <div class="ibdp-core-title">EE</div>
+              <div class="ibdp-core-text">{{ t('academics.IBDPcoreTopics.EEdescription') }}</div>
             </div>
           </div>
         </section>
