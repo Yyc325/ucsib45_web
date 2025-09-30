@@ -100,7 +100,7 @@
         </div>
         <div class="menu-primary-nav-container" :class="{ 'is-top': isTop || router.currentRoute.value.name!='Home' }">
           <div class="page-meta-info">
-            <div class="page-title">UCS IB</div>
+            <div class="page-title">A Global Gateway</div>
             <div class="line"></div>
             <div class="page-name">{{ router.currentRoute.value.meta.title }}</div>
           </div>
