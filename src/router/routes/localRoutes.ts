@@ -15,7 +15,7 @@ const localRoutes = [
                 path: "home",
                 name: "Home",
                 meta: {
-                    title: "UCSIB",
+                    title: "Home",
                     icon: HomeFilled,
                 },
                 component: ComponentCanstants["HOME_PAGE"],
@@ -24,7 +24,7 @@ const localRoutes = [
                 path: "students",
                 name: "Students",
                 meta: {
-                    title: "UCSIB",
+                    title: "Students",
                 },
                 component: ComponentCanstants["STUDENTS_PAGE"],
             },
@@ -32,7 +32,7 @@ const localRoutes = [
                 path: "news",
                 name: "News",
                 meta: {
-                    title: "UCSIB",
+                    title: "News",
                 },
                 component: ComponentCanstants["NEWS_PAGE"],
             },
@@ -73,8 +73,18 @@ const localRoutes = [
                 name: "Students",
                 meta: {
                     title: "students",
+                    hasCover:true
                 },
                 component: ComponentCanstants["STUDENTS_PAGE"],
+            },
+            {
+                path: "community",
+                name: "Community",
+                meta: {
+                    title: "community",
+                    hasCover:true
+                },
+                component: ComponentCanstants["COMMUNITY_PAGE"],
             },
             {
                 path: "article/:id?",
