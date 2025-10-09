@@ -57,6 +57,7 @@ const localRoutes = [
                 name: "Admission",
                 meta: {
                     title: "Admission",
+                    hasCover:true
                 },
                 component: ComponentCanstants["ADMISSION_PAGE"],
             },

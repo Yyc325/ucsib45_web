@@ -61,10 +61,9 @@ const viteConfig = ({command, mode}: ConfigEnv): UserConfig => {
             preprocessorOptions: {
                 scss: {
                     quietDeps: true,
-                    modifyVars: {},
                     javascriptEnabled: true,
                     // 定义全局 scss 变量文件
-                    additionalData: '@forward "src/assets/css/common/var.scss";',
+                    additionalData: '@use "@/assets/css/common/var.scss" as *;',
                 },
             },
             postcss: {
