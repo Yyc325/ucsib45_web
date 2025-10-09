@@ -48,7 +48,7 @@
               <span class="about-card-item__image">
                 <span class="about-card-item__image-show">
                   <img src="https://website.xycloud.net.cn/images/about3.png"/>
-                <span class="about-card-item__image-description">
+                <span class="about-card-item__image-description" @click="$router.push('/campus')">
                   {{ t('aboutpage.CampusLife.more') }}
                 </span>
                 </span>
@@ -62,7 +62,7 @@
               <span class="about-card-item__image">
                 <span class="about-card-item__image-show">
                   <img src="https://website.xycloud.net.cn/images/about2.png"/>
-                <span class="about-card-item__image-description">
+                <span class="about-card-item__image-description" @click="$router.push('/academics')">
                   {{ t('aboutpage.Academic.more') }}
                 </span>
                 </span>
@@ -77,7 +77,7 @@
               <span class="about-card-item__image">
                 <span class="about-card-item__image-show">
                   <img src="https://website.xycloud.net.cn/images/about0.png"/>
-                <span class="about-card-item__image-description">
+                <span class="about-card-item__image-description" @click="$router.push('/community')">
                   {{ t('aboutpage.Community.more') }}
                 </span>
                 </span>
@@ -93,7 +93,7 @@
               <span class="about-card-item__image">
                 <span class="about-card-item__image-show">
                   <img src="https://website.xycloud.net.cn/images/about4.png"/>
-                <span class="about-card-item__image-description">
+                <span class="about-card-item__image-description" @click="$router.push('/admission')">
                   {{ t('aboutpage.Admission.more') }}
                 </span>
                 </span>
@@ -129,13 +129,13 @@ const members = computed(() => [
     desc: t('about.member2.desc')
   },
   {
-    avatar: 'https://website.xycloud.net.cn/images/Selfie2.png',
+    avatar: 'https://website.xycloud.net.cn/images/user-avatar.jpg',
     name: t('about.member3.name'),
     title: t('about.member3.title'),
     desc: t('about.member3.desc')
   },
   {
-    avatar: 'https://website.xycloud.net.cn/images/Selfie3.jpg',
+    avatar: 'https://website.xycloud.net.cn/images/Selfie2.png',
     name: t('about.member4.name'),
     title: t('about.member4.title'),
     desc: t('about.member4.desc')
@@ -147,7 +147,7 @@ const members = computed(() => [
     desc: t('about.member5.desc')
   },
   {
-    avatar: 'https://website.xycloud.net.cn/images/user-avatar.jpg',
+    avatar: 'https://website.xycloud.net.cn/images/Selfie3.jpg',
     name: t('about.member6.name'),
     title: t('about.member6.title'),
     desc: t('about.member6.desc')

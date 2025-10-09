@@ -211,3 +211,57 @@
     }
   }
 }
+.ibdp-core-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 48px;
+  margin: 0 auto;
+  padding: 32px 0;
+
+  .ibdp-core-card {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(26,58,93,0.08);
+    padding: 40px 32px 32px 32px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+    &:hover {
+      box-shadow: 0 8px 32px rgba(26,58,93,0.16);
+    }
+
+    .ibdp-core-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3c81f5 60%, #1a3a5d 100%);
+      color: #fff;
+      font-size: 32px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 12px rgba(60,129,245,0.12);
+      letter-spacing: 2px;
+    }
+    .ibdp-core-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a3a5d;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+      font-family: 'Montserrat', 'Jacques Francois', serif;
+    }
+    .ibdp-core-text {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.7;
+      text-align: center;
+      font-family: 'Lato', Arial, sans-serif;
+    }
+  }
+}

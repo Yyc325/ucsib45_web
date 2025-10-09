@@ -245,12 +245,13 @@ export default {
     },
     about: {
         teamTitle: "我们的团队成员",
-        member1: { name: "赵怡墨", title: "用户界面组负责人", desc: "负责团队UI设计" },
+        member1: { name: "陈奕冰", title: "产品工程师", desc: "负责UI设计" },
         member2: { name: "蔡天宇", title: "网站项目总负责人", desc: "管理网站团队，同时负责前端、后端开发及服务器管理" },
-        member3: { name: "戴震", title: "网站项目管理者", desc: "负责管理团队工作进度,同时负责UI设计" },
-        member4: { name: "范泽馨", title: "编辑部负责人", desc: "负责网站文本编辑工作" },
+        member3: { name: "赵怡墨", title: "用户界面组负责人", desc: "负责团队UI设计" },
+        member4: { name: "戴震", title: "网站项目管理者", desc: "负责管理团队工作进度,同时负责UI设计" },
         member5: { name: "闵瑶", title: "前端开发工程师", desc: "" },
-        member6: { name: "陈奕冰", title: "产品工程师", desc: "负责UI设计" }
+        member6: { name: "范泽馨", title: "编辑部负责人", desc: "负责网站文本编辑工作" },
+
     },
     
 };

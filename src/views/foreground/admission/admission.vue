@@ -16,9 +16,7 @@
           <div class="admission-section__title">
             {{ t('admission.applicationguide.title') }}
           </div>
-          <div class="admission-section__content">
-            {{ t('admission.applicationguide.sub1') }}
-          </div>
+          <div class="admission-section__content" v-html="t('admission.applicationguide.sub1')"></div>
         </div>
         <div class="admission-section faq">
           <div class="admission-section__title">
@@ -31,7 +29,7 @@
                 :key="i"
                 :title="faq.question"
               >
-                <div>{{ faq.answer }}</div>
+                <div v-html="faq.answer"></div>
               </el-collapse-item>
             </el-collapse>
           </div>
@@ -63,7 +61,7 @@ export default defineComponent({
       },
       {
         question: 'Where can I register for the exam?',
-        answer: 'Please follow the instructions and register at the following website:https://www.ulink.cn/ru-xue-liu-cheng/'
+        answer: 'Please follow the instructions and register at <a href="https://www.ulink.cn/ru-xue-liu-cheng/" target="_blank">this website</a>.'
       },
       {
         question: 'Where can I find the exam syllabus?',

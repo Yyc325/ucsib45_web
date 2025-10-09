@@ -66,8 +66,7 @@ export default {
   admission:{
     applicationguide:{
       title:"Application Guidelines",
-      sub1:"Our school’s admissions process includes both a written exam and an interview. Applicants should follow the official enrollment steps provided on https://www.ulink.cn/ru-xue-liu-cheng/ to register, submit documents, and pay fees. Please check the website regularly for exam details, important dates, and admission updates.",
-    }
+      sub1: "Our school’s admissions process includes both a written exam and an interview. Applicants should follow the official enrollment steps provided on <a href='https://www.ulink.cn/ru-xue-liu-cheng/' target='_blank'>this page</a> to register, submit documents, and pay fees. Please check the website regularly for exam details, important dates, and admission updates."    }
   },
   aboutpage:{
     Title:{
@@ -122,7 +121,7 @@ export default {
   },
   tip: {
     userName: "Please enter your username",
-    account: "Please enter your account",
+    account: "Please enter your phone number",
     phone: "Please enter your phone number",
     password: "Please enter your password",
     confirmPassword: "Please confirm your password",
@@ -252,12 +251,13 @@ export default {
   },
   about: {
     teamTitle: "Our Team Members",
-    member1: { name: "Nicole Zhao", title: "Head of the UI group", desc: "In charge of UI designing" },
+    member1: { name: "Cicelie Chen", title: "Product Designer", desc: "In charge of UI designing" },
     member2: { name: "Miles Cai", title: "Head of the website team", desc: "Manage the website team, and be responsible for both front-end and back-end development as well as server management." },
-    member3: { name: "Matthew Dai", title: "Website Manager", desc: "In charge of managing the progress of the team" },
-    member4: { name: "Cindy Fan", title: "Head of Editorial Department", desc: "In charge of website’s editorial content" },
+    member3: { name: "Nicole Zhao", title: "Head of the UI group", desc: "In charge of UI designing" },
+    member4: { name: "Matthew Dai", title: "Website Manager", desc: "In charge of managing the progress of the team" },
     member5: { name: "Lisa Min", title: "Front-end Developer", desc: "" },
-    member6: { name: "Cicelie Chen", title: "Product Designer", desc: "In charge of UI designing" }
+    member6: { name: "Cindy Fan", title: "Head of Editorial Department", desc: "In charge of website’s editorial content" },
+
   }
 };
 
