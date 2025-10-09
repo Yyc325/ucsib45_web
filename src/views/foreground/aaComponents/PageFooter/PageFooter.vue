@@ -7,7 +7,7 @@
           Search UCS
         </div>
         <div class="spline"></div>
-        <div class="page-footer-quick-item">About us</div>
+        <div class="page-footer-quick-item" @click="$router.push('/about')">About us</div>
         <div class="spline"></div>
         <div class="page-footer-quick-item">Enrollment information</div>
       </div>
