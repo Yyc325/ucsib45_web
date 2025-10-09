@@ -55,7 +55,19 @@
         </div>
         <div class="admission-content-body">
           <div class="preview-box">
-            <div class="preview-box-inner"></div>
+            <div class="preview-box-inner">
+              <video 
+                id="myVideoPlayer"
+                class="video-js"
+                controls
+                preload="auto"
+                :width="1105"
+                :height="510"
+              >
+                <source src="https://website.xycloud.net.cn/video/Admission_intro.mp4" type="video/mp4" />
+
+              </video>
+            </div>
           </div>
         </div>
       </div>
