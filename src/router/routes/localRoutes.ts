@@ -96,16 +96,16 @@ const localRoutes = [
                 },
                 component: ComponentCanstants["ALUMNI_PAGE"],
             },
-            {
-                path: "facultyStaff",
-                name: "FacultyStaff",
-                meta: {
-                    title: "Faculty & Staff",
-                    hasCover:true,
-                    hiddenNav:true
-                },
-                component: ComponentCanstants["FACULTY_STAFF_PAGE"],
-            },
+            // {
+            //     path: "facultyStaff",
+            //     name: "FacultyStaff",
+            //     meta: {
+            //         title: "Faculty & Staff",
+            //         hasCover:true,
+            //         hiddenNav:true
+            //     },
+            //     component: ComponentCanstants["_STAFF_PAGE"],
+            // },
             {
                 path: "article/:id?",
                 name: "Article",

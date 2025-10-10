@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="faculty-staff">
     <header class="faculty-staff-header">
       <section class="faculty-staff-header-section right"></section>
@@ -144,4 +144,4 @@ export default defineComponent({
 <style scoped lang="scss">
 @forward "facultyStaff";
 @forward "facultyStaff_mb";
-</style>
+</style> -->

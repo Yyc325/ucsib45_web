@@ -22,7 +22,7 @@ const COMMUNITY_PAGE = ()=> import("@/views/foreground/community/community.vue")
 // 校园生活
 const ALUMNI_PAGE = ()=> import("@/views/foreground/alumni/alumni.vue")
 // 校园生活
-const FACULTY_STAFF_PAGE = ()=> import("@/views/foreground/facultyStaff/facultyStaff.vue")
+// const FACULTY_STAFF_PAGE = ()=> import("@/views/foreground/facultyStaff/facultyStaff.vue")
 
 export default {
   FOREGROUND_LAYOUT,
@@ -36,5 +36,5 @@ export default {
   CAMPUS_PAGE,
   COMMUNITY_PAGE,
   ALUMNI_PAGE,
-  FACULTY_STAFF_PAGE
+  // FACULTY_STAFF_PAGE
 };

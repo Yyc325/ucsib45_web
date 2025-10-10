@@ -190,10 +190,10 @@ const barMenu = computed(() => {
       label: t("header.student"),
       name: "Students",
     },
-    {
-      label: t("header.facultyStaff"),
-      name: "FacultyStaff",
-    },
+    // {
+    //   label: t("header.facultyStaff"),
+    //   name: "FacultyStaff",
+    // },
     {
       label: t("header.alumni"),
       name: "Alumni",
