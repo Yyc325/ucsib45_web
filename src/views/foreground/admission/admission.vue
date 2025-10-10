@@ -20,7 +20,7 @@
         <div v-for="forward in forwardSection" :key="forward.name" class="admission-forward-section" :style="{
           backgroundImage:`url(${forward.background})`
         }">
-          <div class="admission-forward-tip">
+          <div class="admission-forward-tip" @click="navigatorHandle(forward.name)">
             <div class="admission-forward-tip__title">
               {{ forward.title }}
             </div>
@@ -104,7 +104,7 @@ export default defineComponent({
           background: 'https://website.xycloud.net.cn/images/admission_academic.png',
           title: "Academic",
           description: 'Explore Our Curriculum',
-          name: 'Academic'
+          name: 'Academics'
         },
         {
           background: 'https://website.xycloud.net.cn/images/admission_campus.png',

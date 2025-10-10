@@ -101,6 +101,10 @@ $contentWidth: 1440px;
           font-size: 32px;
           line-height: 48px;
           color: #fff;
+          &:hover{
+            cursor: pointer;
+            text-decoration: underline;
+          }
 
           .admission-forward-tip__title {
           }
