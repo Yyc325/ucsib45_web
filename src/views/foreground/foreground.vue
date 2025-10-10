@@ -3,8 +3,9 @@
 -->
 <template>
   <div class="i-layout" :class="{
-        'is-header-image-visible':router.currentRoute.value.name=='Home'
-			}">
+        'is-header-image-visible':router.currentRoute.value.name=='Home',
+        'is-header-hidden':router.currentRoute.value.meta.hiddenNav
+  }">
     <div class="i-layout-wrap" ref="containerRef">
       <div class="i-layout-header" :style="{
 				minHeight:router.currentRoute.value.name=='Home'?'100vh':router.currentRoute.value.meta.hasCover?'3.125rem':'10.625rem',
@@ -16,7 +17,8 @@
 								<!-- <img src="@/assets/images/layout/logo.png" alt="Logo" style="margin-right: 10px" /> -->
                 <!-- logo 暂时隐藏-->
 
-								<img src="https://www.ulink.cn/wp-content/uploads/2024/11/cropped-Corporate-logo-集团标识a-150x150.png" alt="Logo"
+								<img src="https://www.ulink.cn/wp-content/uploads/2024/11/cropped-Corporate-logo-集团标识a-150x150.png"
+                     alt="Logo"
                      style="margin-right: 10px"/>
 								<span>UCS IB</span>
 							</span>
@@ -25,9 +27,9 @@
               <div class="menu-gateway-nav-container">
                 <!-- <div class="gateway-nav&#45;&#45;label">Information for:</div> -->
                 <ul class="menu">
-<!--                  暂时将空白页隐藏 @click="jumpTo(item.name)"-->
+                  <!--                  暂时将空白页隐藏 @click="jumpTo(item.name)"-->
                   <li class="menu-item" v-for="item in barMenu" :key="item.name" @click="jumpTo(item.name)">
-                    {{item.label }}
+                    {{ item.label }}
                   </li>
                 </ul>
                 <div class="search-toggle">
@@ -87,9 +89,9 @@
                   </div>
                   <div class="collapse-menu__content" :class="{'is-active':collapseVisible}">
                     <ul class="collapse-menu-list">
-<!--                      暂时将空白页隐藏  @click="jumpTo(item.name)"-->
+                      <!--                      暂时将空白页隐藏  @click="jumpTo(item.name)"-->
                       <li class="menu-item" v-for="item in barMenu" :key="item.name" @click="jumpTo(item.name)">
-                        {{item.label }}
+                        {{ item.label }}
                       </li>
                     </ul>
                   </div>
@@ -98,7 +100,8 @@
             </nav>
           </div>
         </div>
-        <div class="menu-primary-nav-container" :class="{ 'is-top': isTop || router.currentRoute.value.name!='Home' }">
+        <div class="menu-primary-nav-container" v-if="!router.currentRoute.value.meta.hiddenNav"
+             :class="{ 'is-top': isTop || router.currentRoute.value.name!='Home' }">
           <div class="page-meta-info">
             <div class="page-title">A Global Gateway</div>
             <div class="line"></div>
@@ -148,7 +151,7 @@ const state = reactive({
   languageVisible: false,
   collapseVisible: false,
 });
-const {  languageVisible, isTop, collapseVisible} = toRefs(state);
+const {languageVisible, isTop, collapseVisible} = toRefs(state);
 
 // 切换语言
 const switchLanguage = (lang: any) => {
@@ -172,24 +175,28 @@ const entrances = computed(() => {
     {
       label: t("header.backstage"),
       value: 'backstage',
-      permission:['admin','teacher']
+      permission: ['admin', 'teacher']
     },
     {
       label: t("header.logout"),
       value: 'logout',
-      permission:['admin','student','parent','teacher',"",null]
+      permission: ['admin', 'student', 'parent', 'teacher', "", null]
     },
-  ].filter(item=>item.permission.includes(getUserInfo.value.identity))
+  ].filter(item => item.permission.includes(getUserInfo.value.identity))
 })
 const barMenu = computed(() => {
   return [
     {
-      label:t("header.student"),
-      name:"Students",
+      label: t("header.student"),
+      name: "Students",
     },
     {
-      label:t("header.alumni"),
-      name:"Alumni",
+      label: t("header.facultyStaff"),
+      name: "FacultyStaff",
+    },
+    {
+      label: t("header.alumni"),
+      name: "Alumni",
     }
   ]
 })
@@ -236,7 +243,7 @@ const entranceHandler = (entrance: any) => {
       // const url = router.resolve({path:'/backstage/user'}).href as any;
       // window.open(url,"_blank");
       router.push({
-        name:"User"
+        name: "User"
       })
       break;
     case "logout":

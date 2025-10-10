@@ -11,6 +11,9 @@
         height: 288px !important;
       }
     }
+    &.is-header-hidden{
+      padding-top: 50px;
+    }
     .i-layout-header {
       min-height: auto !important;
       .brand-bar{
@@ -71,6 +74,7 @@
       .menu-primary-nav-container{
         padding:0;
         height: 50px;
+        background-color: #000;
         .page-meta-info{
           display: none;
         }
