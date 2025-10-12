@@ -13,7 +13,7 @@
         </section>
         <section class="community-header-section right">
           <div class="community-header-cover">
-            <img src="https://website.xycloud.net.cn/images/cover.jpg" alt="">
+            <img src="https://website.xycloud.net.cn/images/Halloween1.png" alt="">
           </div>
         </section>
       </header>
