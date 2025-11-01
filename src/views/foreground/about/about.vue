@@ -123,7 +123,7 @@ const members = computed(() => [
     desc: t('about.member1.desc')
   },
   {
-    avatar: 'https://website.xycloud.net.cn/images/Selfie1.jpg',
+    avatar: 'https://website.xycloud.net.cn/photo.jpg',
     name: t('about.member2.name'),
     title: t('about.member2.title'),
     desc: t('about.member2.desc')
