@@ -117,7 +117,7 @@ const { t } = useI18n()
 
 const members = computed(() => [
   {
-    avatar: 'https://website.xycloud.net.cn/images/user-avatar.jpg',
+    avatar: 'https://website.xycloud.net.cn/images/Selfie4.png',
     name: t('about.member1.name'),
     title: t('about.member1.title'),
     desc: t('about.member1.desc')
