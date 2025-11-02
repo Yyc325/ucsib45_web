@@ -23,7 +23,7 @@ const COMMUNITY_PAGE = ()=> import("@/views/foreground/community/community.vue")
 const ALUMNI_PAGE = ()=> import("@/views/foreground/alumni/alumni.vue")
 // 校园生活
 // const FACULTY_STAFF_PAGE = ()=> import("@/views/foreground/facultyStaff/facultyStaff.vue")
-
+const IBDP_PAGE = ()=> import("@/views/foreground/academics/ExploreIBDPCourse.vue")
 export default {
   FOREGROUND_LAYOUT,
   HOME_PAGE,
@@ -36,5 +36,6 @@ export default {
   CAMPUS_PAGE,
   COMMUNITY_PAGE,
   ALUMNI_PAGE,
+  IBDP_PAGE,
   // FACULTY_STAFF_PAGE
 };

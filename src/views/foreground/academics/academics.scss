@@ -135,12 +135,33 @@
                   margin-bottom: 46px;
                 }
                 .section-card__link{
-                  span{
+                  display: flex;
+                  margin-top: 18px;
+                  
+
+                  /* 覆盖 a、span、li.button 三种情况 */
+                  a.btn-explore,
+                  .btn-explore,
+                  span,
+                  li.button {
                     color: #1a87f8;
-                    font-size: 36px;
-                    line-height: 20px;
+                    font-size: 36px !important;
+                    line-height: 1.2;
                     text-decoration: underline;
                     cursor: pointer;
+                    font-weight: 700;
+                    background: transparent;
+                    border: none;
+                    padding: 0;
+                    display: inline-block;
+                  }
+
+                  a.btn-explore:hover,
+                  .btn-explore:hover,
+                  span:hover,
+                  li.button:hover {
+                    color: #154a86;
+                    transform: translateY(-2px);
                   }
                 }
               }

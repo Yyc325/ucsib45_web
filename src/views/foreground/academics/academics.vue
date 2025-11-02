@@ -51,7 +51,7 @@
                   <div class="section-card__title">{{t('academics.IBDPcourses.subtitle2')}}</div>
                   <div class="section-card__desc">{{t('academics.IBDPcourses.description2')}}</div>
                   <div class="section-card__link">
-                    <span>{{t('academics.IBDPcourses.Explore')}}</span>
+                    <li class=button @click="$router.push('/ibdp-explore')">{{ $t('academics.IBDPcourses.Explore')}}</li>
                   </div>
                 </article>
               </div>

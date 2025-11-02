@@ -107,6 +107,16 @@ const localRoutes = [
             //     component: ComponentCanstants["_STAFF_PAGE"],
             // },
             {
+                path: "ibdp-explore",
+                name: "IBDPExplore",
+                meta: {
+                    title: "Explore IBDP Course",
+                    hasCover:true,
+                    hiddenNav:true
+                },
+                component: ComponentCanstants["IBDP_PAGE"],
+            },
+            {
                 path: "article/:id?",
                 name: "Article",
                 meta: {
