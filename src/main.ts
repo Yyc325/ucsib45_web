@@ -8,6 +8,7 @@ import "@/assets/css/index.scss";
 // 组件引入
 import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
+import '@/assets/css/tailwind.css'
 // 路由引入
 import { router, setupRouter } from "@/router";
 import i18n from "./language";

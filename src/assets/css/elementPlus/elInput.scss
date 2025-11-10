@@ -13,5 +13,10 @@
     &::-webkit-input-placeholder {
       color: #869096;
     }
+    &:focus,
+    &:hover{
+      border: none !important;
+      box-shadow: none !important;
+    }
   }
 }

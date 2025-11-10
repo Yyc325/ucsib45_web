@@ -13,9 +13,13 @@ const USER = () =>
 // 公告管理
 const NOTICE = () =>
     import("@/views/backstage/notice/notice.vue");
+// 公告管理
+const PROHIBITED = () =>
+    import("@/views/backstage/prohibited/prohibited.vue");
 
 export default {
     BACKSTAGE_LAYOUT,
     USER,
-    NOTICE
+    NOTICE,
+    PROHIBITED
 };

@@ -67,7 +67,10 @@ const viteConfig = ({command, mode}: ConfigEnv): UserConfig => {
                 },
             },
             postcss: {
-                plugins: [postcssPluginPx2rem(px2remOptions)]
+                plugins: [
+                    postcssPluginPx2rem(px2remOptions),
+                    require('tailwindcss')
+                ]
             }
         },
         server: {

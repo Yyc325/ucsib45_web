@@ -222,6 +222,10 @@ export default {
           }
         }
       }
+    },
+    Prohibited:{
+      title:'Prohibited',
+      description:'Used to control comments and supporting custom types'
     }
   },
   message:{

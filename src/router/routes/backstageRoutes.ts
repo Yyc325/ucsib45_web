@@ -31,6 +31,15 @@ const backstageRoutes = [
           description: "更多文化宣传，实时推送各类信息",
         },
       },
+      {
+        path: "prohibited",
+        name: "Prohibited",
+        component: ComponentCanstants["PROHIBITED"],
+        meta: {
+          title: "UCS IB 评论",
+          description: "用于管理用户评论信息",
+        },
+      },
     ],
   },
 ] as AppRouteRecordRaw[];
