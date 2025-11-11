@@ -3,7 +3,7 @@
     <div class="page-footer__inner">
       <div class="page-footer-name">UCS IB</div>
       <div class="page-footer-quick">
-        <div class="page-footer-quick-item">
+        <div class="page-footer-quick-item" @click="searchUCSIB">
           Search UCS
         </div>
         <div class="spline"></div>
@@ -33,7 +33,16 @@
 import {defineComponent} from 'vue'
 
 export default defineComponent({
-  name: "PageFooter"
+  name: "PageFooter",
+  emits:['openSearch'],
+  setup(props,{emit}){
+    const searchUCSIB = ()=>{
+      emit('openSearch')
+    }
+    return {
+      searchUCSIB
+    }
+  }
 })
 </script>
 

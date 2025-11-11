@@ -6,6 +6,48 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "26239015",
+      "name": "goto",
+      "font_class": "goto",
+      "unicode": "e66d",
+      "unicode_decimal": 58989
+    },
+    {
+      "icon_id": "4767096",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "e7fc",
+      "unicode_decimal": 59388
+    },
+    {
+      "icon_id": "7117730",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "300458",
+      "name": "search_history",
+      "font_class": "searchhistory",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "1290286",
+      "name": "Help",
+      "font_class": "Help",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "45580464",
+      "name": "liebiao",
+      "font_class": "liebiao",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
       "icon_id": "592049",
       "name": "菜单",
       "font_class": "caidan",

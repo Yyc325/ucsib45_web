@@ -10,32 +10,36 @@ const NEWS_PAGE = () => import("@/views/foreground/news/news.vue");
 // 关于
 const ABOUT_PAGE = () => import("@/views/foreground/about/about.vue");
 // 学术研究
-const ACADEMIC_PAGE = ()=> import("@/views/foreground/academics/academics.vue")
+const ACADEMIC_PAGE = () => import("@/views/foreground/academics/academics.vue")
 // 入学
-const ADMISSION_PAGE = ()=> import("@/views/foreground/admission/admission.vue")
+const ADMISSION_PAGE = () => import("@/views/foreground/admission/admission.vue")
 // 文章展示页面
-const ARTICLE_PAGE = ()=> import("@/views/foreground/articleDisplay/articleDisplay.vue")
+const ARTICLE_PAGE = () => import("@/views/foreground/articleDisplay/articleDisplay.vue")
 // 校园生活
-const CAMPUS_PAGE = ()=> import("@/views/foreground/campusLife/campusLife.vue")
+const CAMPUS_PAGE = () => import("@/views/foreground/campusLife/campusLife.vue")
 // 社区
-const COMMUNITY_PAGE = ()=> import("@/views/foreground/community/community.vue")
+const COMMUNITY_PAGE = () => import("@/views/foreground/community/community.vue")
 // 校园生活
-const ALUMNI_PAGE = ()=> import("@/views/foreground/alumni/alumni.vue")
+const ALUMNI_PAGE = () => import("@/views/foreground/alumni/alumni.vue")
 // 校园生活
 // const FACULTY_STAFF_PAGE = ()=> import("@/views/foreground/facultyStaff/facultyStaff.vue")
-const IBDP_PAGE = ()=> import("@/views/foreground/academics/ExploreIBDPCourse.vue")
+const IBDP_PAGE = () => import("@/views/foreground/academics/ExploreIBDPCourse.vue")
+
+// 搜索页
+const SEARCH_PAGE = () => import('@/views/foreground/search/search.vue')
 export default {
-  FOREGROUND_LAYOUT,
-  HOME_PAGE,
-  STUDENTS_PAGE,
-  NEWS_PAGE,
-  ABOUT_PAGE,
-  ACADEMIC_PAGE,
-  ADMISSION_PAGE,
-  ARTICLE_PAGE,
-  CAMPUS_PAGE,
-  COMMUNITY_PAGE,
-  ALUMNI_PAGE,
-  IBDP_PAGE,
-  // FACULTY_STAFF_PAGE
+    FOREGROUND_LAYOUT,
+    HOME_PAGE,
+    STUDENTS_PAGE,
+    NEWS_PAGE,
+    ABOUT_PAGE,
+    ACADEMIC_PAGE,
+    ADMISSION_PAGE,
+    ARTICLE_PAGE,
+    CAMPUS_PAGE,
+    COMMUNITY_PAGE,
+    ALUMNI_PAGE,
+    IBDP_PAGE,
+    SEARCH_PAGE
+    // FACULTY_STAFF_PAGE
 };

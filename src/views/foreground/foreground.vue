@@ -32,7 +32,7 @@
                     {{ item.label }}
                   </li>
                 </ul>
-                <div class="search-toggle">
+                <div class="search-toggle" @click="searchTrigger">
                   <el-icon color="#fff">
                     <Search/>
                   </el-icon>
@@ -125,9 +125,10 @@
         </div>
       </div>
       <div class="i-layout-footer">
-        <page-footer></page-footer>
+        <page-footer @openSearch="searchTrigger"></page-footer>
       </div>
     </div>
+    <ISearchPopover ref="ISearchPopoverRef" :disabled="false"></ISearchPopover>
   </div>
 </template>
 
@@ -141,10 +142,12 @@ import {router} from "@/router";
 import en from "@/language/en";
 import {exitAfter} from "../backstage/account/account";
 import PageFooter from "@/views/foreground/aaComponents/PageFooter/PageFooter.vue";
+import ISearchPopover from "@/views/foreground/aaComponents/ISearchPopover/ISearchPopover.vue";
 
 const {locale, t} = useI18n();
 
 const containerRef = ref<HTMLDivElement>();
+const ISearchPopoverRef = ref<any>()
 const {getUserInfo} = useUser();
 const state = reactive({
   isTop: false, // 是否在顶部导航栏显示
@@ -228,6 +231,17 @@ const primaryNavs = computed(() => {
     },
   ];
 })
+
+// 监听路由变化 重置isTop
+watch(
+  () => router.currentRoute.value.name,
+  () => {
+    state.isTop = false;
+    // 重置内容区视口滚动高度
+    containerRef.value && containerRef.value.scrollTo({top: 0});
+  }
+);
+
 // 页面跳转
 const jumpTo = (name: string) => {
   console.log(name)
@@ -273,16 +287,12 @@ const handleScroll = (e: any) => {
   }
 };
 
-// 监听路由变化 重置isTop
-watch(
-  () => router.currentRoute.value.name,
-  () => {
-    state.isTop = false;
-    // 重置内容区视口滚动高度
-    containerRef.value && containerRef.value.scrollTo({top: 0});
-  }
-);
-
+// 搜索触发
+const searchTrigger = () => {
+  router.push({
+    name: 'Search',
+  })
+}
 // header高度
 // 定义响应式变量来存储视口高度
 // const viewportHeight = ref(window.innerHeight);

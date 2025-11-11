@@ -14,12 +14,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      rotate: {
+        '315': '315deg',
+      },
       width:{
-        '45':'11.25rem'
+        '45':'11.25rem',
+
       },
       colors:{
         'line-color':'#E5E8EF',
-        'hover-bg':'#F0F5FF'
+        'hover-bg':'#F0F5FF',
+        'title-grey':'#787878',
+        'search-color':'#160082',
+        'history-bg':'#D9D9D9'
+      },
+      spacing:{
+        '3.125':'3.125rem'
       }
     },
   },

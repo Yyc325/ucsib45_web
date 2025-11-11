@@ -123,6 +123,14 @@ const localRoutes = [
                     title: "Article",
                 },
                 component: ComponentCanstants["ARTICLE_PAGE"],
+            },
+            {
+                path: "search",
+                name: "Search",
+                meta: {
+                    title: "Search",
+                },
+                component: ComponentCanstants["SEARCH_PAGE"],
             }
         ],
     },
