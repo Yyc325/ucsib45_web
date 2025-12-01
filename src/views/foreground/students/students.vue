@@ -214,7 +214,8 @@ export default defineComponent({
         },
         {
           date: '2025',
-          background: '#1F2D7C'
+          background: '#1F2D7C',
+          videoUrl: 'https://website.xycloud.net.cn/video/ibhn.mp4'
         },
       ]
     })
