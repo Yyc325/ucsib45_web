@@ -29,7 +29,7 @@
                   <div class="section-card__desc">{{t('academics.preIbCourses.description1')}}</div>
                   <div class="section-card__title">{{t('academics.preIbCourses.subtitle2')}}</div>
                   <div class="section-card__desc">{{t('academics.preIbCourses.description2')}}</div>
-                  <div class="section-card__link">
+                  <div class="section-card__link" @click="jumpToMoreCourses('ExplorePreIB')">
                     <span>{{t('academics.preIbCourses.Explore')}}</span>
                   </div>
                 </article>
@@ -51,7 +51,7 @@
                   <div class="section-card__title">{{t('academics.IBDPcourses.subtitle2')}}</div>
                   <div class="section-card__desc">{{t('academics.IBDPcourses.description2')}}</div>
                   <div class="section-card__link">
-                    <li class=button @click="$router.push('/ibdp-explore')">{{ $t('academics.IBDPcourses.Explore')}}</li>
+                    <li class=button @click="$router.push('/ibdp-explore')">{{ t('academics.IBDPcourses.Explore')}}</li>
                   </div>
                 </article>
               </div>
@@ -88,6 +88,7 @@
 <script lang="ts">
 import { defineComponent, computed } from "vue";
 import { useI18n } from "vue-i18n";
+import {router} from "@/router";
 
 export default defineComponent({
   name:'Academics',
@@ -98,9 +99,19 @@ export default defineComponent({
       { label: t('academics.themeTabs.facultyRatio'), name: "2" },
       { label: t('academics.themeTabs.courses'), name: "3" }
     ]);
+
+    const jumpToMoreCourses = (courseName:string)=>{
+      router.push({
+        name:'Courses',
+        query:{
+          courseName:courseName
+        }
+      })
+    }
     return {
       t,
-      themeTabs
+      themeTabs,
+      jumpToMoreCourses
     }
   }
 })

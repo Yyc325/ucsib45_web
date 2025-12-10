@@ -131,6 +131,16 @@ const localRoutes = [
                     title: "Search",
                 },
                 component: ComponentCanstants["SEARCH_PAGE"],
+            },
+            {
+                path: "courses",
+                name: "Courses",
+                meta: {
+                    title: "Courses",
+                    hasCover:true,
+                    hiddenNav:true
+                },
+                component: ComponentCanstants["COURSES_PAGE"],
             }
         ],
     },

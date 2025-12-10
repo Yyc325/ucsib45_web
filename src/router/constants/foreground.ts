@@ -27,6 +27,8 @@ const IBDP_PAGE = () => import("@/views/foreground/academics/ExploreIBDPCourse.v
 
 // 搜索页
 const SEARCH_PAGE = () => import('@/views/foreground/search/search.vue')
+// 课程详情页
+const COURSES_PAGE = ()=> import('@/views/foreground/academics/Courses/Courses.vue')
 export default {
     FOREGROUND_LAYOUT,
     HOME_PAGE,
@@ -40,6 +42,7 @@ export default {
     COMMUNITY_PAGE,
     ALUMNI_PAGE,
     IBDP_PAGE,
-    SEARCH_PAGE
+    SEARCH_PAGE,
+    COURSES_PAGE
     // FACULTY_STAFF_PAGE
 };

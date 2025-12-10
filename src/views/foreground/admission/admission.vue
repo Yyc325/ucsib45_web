@@ -1,6 +1,5 @@
 <template>
   <div class="admission">
-
     <div class="admission-header">
       <div class="admission-header-inner">
         <div class="admission-header-section">
