@@ -23,7 +23,7 @@ const COMMUNITY_PAGE = () => import("@/views/foreground/community/community.vue"
 const ALUMNI_PAGE = () => import("@/views/foreground/alumni/alumni.vue")
 // 校园生活
 // const FACULTY_STAFF_PAGE = ()=> import("@/views/foreground/facultyStaff/facultyStaff.vue")
-const IBDP_PAGE = () => import("@/views/foreground/academics/ExploreIBDPCourse.vue")
+const IBDP_PAGE = () => import("@/views/foreground/academics/Courses/ExploreIBDPCourse/ExploreIBDPCourse.vue")
 
 // 搜索页
 const SEARCH_PAGE = () => import('@/views/foreground/search/search.vue')

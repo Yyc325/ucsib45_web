@@ -12,14 +12,14 @@
             <span>Compulsory Subjects</span>
           </div>
           <div class="relative w-full overflow-hidden">
-            <div class="w-auto h-max flex pl-8 pr-8 pt-2 pb-2 transform transition-transform max-[576px]:flex-col"
+            <div class="w-auto h-max flex px-8 py-2 transform transition-transform max-[576px]:flex-col"
                  :style="{
               '--tw-translate-x':`-${22*currentIndex}rem`
             }">
               <div
-                class="flex flex-col w-80 bg-history-bg shadow-lg rounded-xl flex-shrink-0 overflow-hidden pb-8 select-none max-[576px]:mb-8 max-[576px]:mr-auto max-[576px]:ml-auto"
+                class="flex flex-col w-80 bg-history-bg shadow-lg rounded-xl flex-shrink-0 overflow-hidden pb-8 select-none max-[576px]:w-full max-[576px]:mr-auto max-[576px]:ml-auto"
                 v-for="(subject,index) in compulsorySubjects" :key="subject.title"
-                :class="{'min-[1440px]:mr-8':index !==compulsorySubjects.length-1}">
+                :class="{'min-[1440px]:mr-8':index !==compulsorySubjects.length-1,'max-[576px]:mb-8':index !==compulsorySubjects.length-1}">
                 <div
                   class="flex-shrink-0 flex items-center justify-center pt-8 text-3xl pb-4 max-[576px]:text-xl max-[576px]:pt-4 max-[576px]:pb-2">
                   {{ subject.title }}
@@ -335,7 +335,7 @@ export default defineComponent({
               content: "Pre-IB Psychology introduces core concepts and builds a foundation for the IBDP program. Students explore fundamental patterns of human behavior while developing critical thinking and cross-cultural perspectives. Through interactive activities, the course cultivates academic expression and psychological literacy, preparing students for advanced study in IBDP Psychology."
             },
           ],
-          cardClass: 'w-80'
+          cardClass: 'w-80 max-[576px]:w-full'
         },
         {
           title: 'Sciences',
