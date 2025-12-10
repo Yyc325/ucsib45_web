@@ -121,7 +121,8 @@
             culture, history, philosophy), such as English cultural concept presentations</p>
         </div>
         <div class="w-104 row-span-3 col-span-3 shadow-lg max-[576px]:w-full max-[576px]:overflow-hidden">
-          <img class="h-full object-contain max-[576px]:w-full max-[576px]:h-auto" src="https://website.xycloud.net.cn/images/english-center.jpg" alt="">
+          <img class="h-full object-contain max-[576px]:w-full max-[576px]:h-auto"
+               src="https://website.xycloud.net.cn/images/english-center.jpg" alt="">
         </div>
         <div
           class="row-span-3 col-span-6 bg-history-bg/30 shadow-lg flex flex-col items-center px-8 py-8 text-center break-keep leading-8 max-[576px]:p-4 max-[576px]:text-sm">
@@ -149,7 +150,8 @@
       <div class="flex items-center justify-center mb-12 max-[576px]:mb-6">
         <div class="text-4xl max-[576px]:text-xl">Extended Math</div>
       </div>
-      <div class="extend-math w-full grid grid-rows-8 grid-cols-11 gap-8 mb-16 text-lg max-[576px]:mb-8 max-[576px]:flex max-[576px]:flex-col">
+      <div
+        class="extend-math w-full grid grid-rows-8 grid-cols-11 gap-8 mb-16 text-lg max-[576px]:mb-8 max-[576px]:flex max-[576px]:flex-col">
         <div
           class="col-start-1 col-end-5 row-start-1 row-end-6 bg-history-bg/30 shadow-lg flex flex-col justify-center text-base p-8 break-keep max-[576px]:p-4 max-[576px]:text-sm">
           <p>Course Introduction:</p>
@@ -167,7 +169,8 @@
             mathematical problems.
           </p>
         </div>
-        <div class="col-start-1 col-end-8 row-start-6 row-end-9 bg-history-bg/30 p-8 shadow-lg flex break-all max-[576px]:text-sm">
+        <div
+          class="col-start-1 col-end-8 row-start-6 row-end-9 bg-history-bg/30 p-8 shadow-lg flex break-all max-[576px]:text-sm">
           This instructional unit integrates core mathematical knowledge with comprehensive skill development. In terms
           of content, it systematically covers linear relations, three-dimensional geometry, permutations and
           combinations, statistics and probability, vectors, geometric transformations, circular functions, Voronoi
@@ -179,14 +182,17 @@
           application.
         </div>
         <div
-          class="col-start-5 col-end-11 row-start-1 row-end-3 bg-history-bg/30 shadow-lg">
+          class="col-start-5 col-end-11 row-start-1 row-end-3 bg-history-bg/30 shadow-lg max-[576px]:flex-1">
           <div class="grid grid-cols-3 grid-rows-1 p-8 gap-16 max-[576px]:gap-4 max-[576px]:p-4">
-            <img class="h-32 max-[576px]:h-full object-contain" src="https://website.xycloud.net.cn/images/math-1.jpg" alt="">
-            <img class="h-32 max-[576px]:h-full object-contain" src="https://website.xycloud.net.cn/images/math-2.jpg" alt="">
-            <img class="h-32 max-[576px]:h-full object-contain" src="https://website.xycloud.net.cn/images/math-3.png" alt="">
+            <img class="h-32  max-[576px]:h-auto object-contain" src="https://website.xycloud.net.cn/images/math-1.jpg"
+                 alt="">
+            <img class="h-32  max-[576px]:h-auto object-contain" src="https://website.xycloud.net.cn/images/math-2.jpg"
+                 alt="">
+            <img class="h-32 max-[576px]:h-auto object-contain" src="https://website.xycloud.net.cn/images/math-3.png"
+                 alt="">
           </div>
         </div>
-        <div class="row-span-3 col-span-3 bg-history-bg/30 p-4 shadow-lg text-base">
+        <div class="row-span-3 col-span-3 bg-history-bg/30 p-4 shadow-lg text-base max-[576px]:flex-1">
           <p>The course focuses on:</p>
           <p>· Reading and comprehending English mathematical materials</p>
           <p>· Supplementary mathematical content and mathematical thinking</p>
@@ -198,27 +204,32 @@
         </div>
         <div
           class="col-start-8 col-end-11 row-start-3 row-end-9 bg-history-bg/30 shadow-lg flex flex-col items-center px-12 py-8 text-center break-keep leading-8">
-          <div class="h-full flex flex-col justify-center items-center">
+          <div class="h-full flex flex-col justify-center items-center max-[576px]:h-fit">
             <div class="mb-16">
-              <img class="h-full object-contain" src="https://website.xycloud.net.cn/images/math-4.jpg" alt="">
+              <img class="h-full object-contain max-[576px]:h-auto"
+                   src="https://website.xycloud.net.cn/images/math-4.jpg" alt="">
             </div>
             <div>
-              <img class="h-full object-contain" src="https://website.xycloud.net.cn/images/math-5.png" alt=""></div>
+              <img class="h-full object-contain max-[576px]:h-auto"
+                   src="https://website.xycloud.net.cn/images/math-5.png" alt=""></div>
           </div>
         </div>
       </div>
 
       <div class="flex flex-col items-center justify-center mb-12 max-[576px]:mb-6">
         <div class="text-4xl mb-8 max-[576px]:text-2xl max-[576px]:mb-4">AP-integrated class</div>
-        <div class="text-center text-shadow max-[576px]:text-sm">UCS IB further runs an AP-integrated stream in Pre-IB. Enrollment is
+        <div class="text-center text-shadow max-[576px]:text-sm">UCS IB further runs an AP-integrated stream in Pre-IB.
+          Enrollment is
           selective,with students screened through a multi-level examination to qualify.
         </div>
       </div>
       <div class="mb-16">
         <div class="flex pb-12 max-[576px]:flex-col">
-          <div class="flex-9 bg-history-bg/30 mr-16 shadow-lg rounded-sm p-8 text-center max-[576px]:mr-0 max-[576px]:mb-6">
+          <div
+            class="flex-9 bg-history-bg/30 mr-16 shadow-lg rounded-sm p-8 text-center max-[576px]:mr-0 max-[576px]:mb-6">
             <div class="text-4xl mb-4 max-[576px]:text-xl">Math</div>
-            <div class="text-xl max-[576px]:text-sm">This Pre-IB Mathematics & AP-integrated course covers the standard Pre-IB curriculum
+            <div class="text-xl max-[576px]:text-sm">This Pre-IB Mathematics & AP-integrated course covers the standard
+              Pre-IB curriculum
               while
               incorporating Pre-calculus and AP Calculus AB. It fosters a deep conceptual understanding of functions and
               calculus, applying math to real-world contexts to develop comprehensive analytical skills. Upon
@@ -228,7 +239,8 @@
           </div>
           <div class="flex-8 bg-history-bg/30 shadow-lg rounded-sm p-8 text-center">
             <div class="text-4xl mb-4 max-[576px]:text-xl">Economics</div>
-            <div class="text-xl max-[576px]:text-sm">This Pre-IB Economics & AP-integrated course delves into the decision-making behaviors
+            <div class="text-xl max-[576px]:text-sm">This Pre-IB Economics & AP-integrated course delves into the
+              decision-making behaviors
               of individuals
               and firms in specific markets. Students will systematically master core economic principles, analyze
               resource allocation mechanisms, and evaluate policy impacts. The course not only establishes a solid
@@ -239,21 +251,26 @@
           </div>
         </div>
         <div class="flex max-[576px]:flex-col">
-          <div class="flex-7 bg-history-bg/30 shadow-lg rounded-sm p-8 text-center max-[576px]:mb-4">
+          <div class="flex-7 bg-history-bg/30 shadow-lg rounded-sm p-8 text-center max-[576px]:flex-1 max-[576px]:mb-4">
             <div class="text-4xl mb-4 max-[576px]:text-xl">Chemistry</div>
-            <div class="text-xl max-[576px]:text-sm">This Pre-IB & AP Chemistry course builds a strong foundation in core concepts and
+            <div class="text-xl max-[576px]:text-sm">This Pre-IB & AP Chemistry course builds a strong foundation in
+              core concepts and
               experimental skills. Students learn to solve complex problems through hands-on labs and critical thinking,
               preparing them for both IBDP Chemistry and the AP Chemistry exam. Key college-level topics are covered
               through lectures, discussions, and research.
             </div>
           </div>
-          <div class="flex-2 ml-6 mr-6 max-[576px]:flex max-[576px]:m-0 max-[576px]:mb-4">
-            <img class="flex-5 mb-6 max-[576px]:mb-0 max-[576px]:flex-1 max-[576px]:h-48 max-[576px]:mr-4" src="https://website.xycloud.net.cn/images/Chemistry-1.png" alt="">
-            <img class="flex-4 max-[576px]:flex-1 max-[576px]:h-48" src="https://website.xycloud.net.cn/images/Chemistry-2.png" alt="">
+          <div
+            class="flex-2 ml-6 mr-6 max-[576px]:flex-1 max-[576px]:flex max-[576px]:m-0 max-[576px]:mb-4 max-[576px]:flex-1">
+            <img class="flex-5 mb-6 max-[576px]:mb-0 max-[576px]:flex-1 max-[576px]:h-48 max-[576px]:mr-4"
+                 src="https://website.xycloud.net.cn/images/Chemistry-1.png" alt="">
+            <img class="flex-4 max-[576px]:flex-1 max-[576px]:h-48"
+                 src="https://website.xycloud.net.cn/images/Chemistry-2.png" alt="">
           </div>
-          <div class="flex-6 bg-history-bg/30 shadow-lg rounded-sm p-8 text-center max-[576px]:mb-4">
+          <div class="flex-6 bg-history-bg/30 shadow-lg rounded-sm p-8 text-center max-[576px]:flex-1 max-[576px]:mb-4">
             <div class="text-4xl mb-4 max-[576px]:text-xl">Physics</div>
-            <div class="text-xl max-[576px]:text-sm">This Pre-IB & AP Physics course builds deep conceptual understanding and experimental
+            <div class="text-xl max-[576px]:text-sm">This Pre-IB & AP Physics course builds deep conceptual
+              understanding and experimental
               skills, creating a strong foundation for IBDP Physics. With a significant focus on hands-on laboratory
               work, students develop practical abilities while mastering content aligned with the AP Physics 1
               curriculum. This integrated approach ensures thorough preparation for both IBDP challenges and the AP
