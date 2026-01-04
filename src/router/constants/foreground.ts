@@ -23,10 +23,12 @@ const COMMUNITY_PAGE = () => import("@/views/foreground/community/community.vue"
 const ALUMNI_PAGE = () => import("@/views/foreground/alumni/alumni.vue")
 // 校园生活
 // const FACULTY_STAFF_PAGE = ()=> import("@/views/foreground/facultyStaff/facultyStaff.vue")
-const IBDP_PAGE = () => import("@/views/foreground/academics/ExploreIBDPCourse.vue")
+const IBDP_PAGE = () => import("@/views/foreground/academics/Courses/ExploreIBDPCourse/ExploreIBDPCourse.vue")
 
 // 搜索页
 const SEARCH_PAGE = () => import('@/views/foreground/search/search.vue')
+// 课程详情页
+const COURSES_PAGE = ()=> import('@/views/foreground/academics/Courses/Courses.vue')
 export default {
     FOREGROUND_LAYOUT,
     HOME_PAGE,
@@ -40,6 +42,7 @@ export default {
     COMMUNITY_PAGE,
     ALUMNI_PAGE,
     IBDP_PAGE,
-    SEARCH_PAGE
+    SEARCH_PAGE,
+    COURSES_PAGE
     // FACULTY_STAFF_PAGE
 };
