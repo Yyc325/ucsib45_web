@@ -52,20 +52,27 @@
             <div class="community-section-content">
               <div class="community-section-comment">
                 <div class="comment-display">
-                  <div class="comment-display-card" v-for="(comment,index) in commentList" :key="index"
-                       :style="comment.style">
-                    <div class="comment-display-card-dot" :style="{zIndex:index,...comment.dotStyle}"></div>
+                  <div 
+                    class="comment-display-card" 
+                    v-for="(comment, index) in commentList" 
+                    :key="index + '-' + (comment.content?.length || 0)" 
+                    :style="comment.style"
+                  >
+                    <div class="comment-display-card-dot" :style="{zIndex:index, ...comment.dotStyle}"></div>
                     <div class="comment-display-card-header">
                       <div class="comment-display-card-avatar"></div>
-                      <div class="comment-display-card-author">{{comment.author}}</div>
+                      <div class="comment-display-card-author">{{ comment.author }}</div>
                     </div>
-                    <div class="comment-display-card-content">xxxxxxx</div>
+                    <div class="comment-display-card-content">{{ comment.content }}</div>
                   </div>
                 </div>
                 <div class="comment-input">
                   <div class="comment-input-tip">Share your thoughts for UCS IB…</div>
                   <div class="comment-input-inner">
                     <el-input v-model="shareContent" type="textarea" resize="none"></el-input>
+                  </div>
+                  <div class="comment-input-action">
+                    <button @click="submitComment">Post</button>
                   </div>
                 </div>
               </div>
@@ -79,6 +86,7 @@
 <script lang="ts">
 import {defineComponent, reactive, toRefs} from 'vue'
 import ContentLayout from "@/views/foreground/aaComponents/ContentLayout/ContentLayout.vue";
+import { get_comments, post_comment } from "@/apis/backstage/comment";
 
 export default defineComponent({
   name: "community",
@@ -163,6 +171,7 @@ export default defineComponent({
         {
           author: 'XXX',
           avatar: "",
+          content: "",
           style: {
             top:'3.75rem',
             left:'3.75rem',
@@ -179,6 +188,7 @@ export default defineComponent({
         {
           author: 'XXX',
           avatar: "",
+          content: "",
           style: {
             top:'13.875rem',
             left:'14rem',
@@ -195,6 +205,7 @@ export default defineComponent({
         {
           author: 'XXX',
           avatar: "",
+          content: "",
           style: {
             top:'22.5rem',
             left:'3.75rem',
@@ -212,6 +223,7 @@ export default defineComponent({
         {
           author: 'XXX',
           avatar: "",
+          content: "",
           style: {
             top:'5rem',
             left:'28.75rem',
@@ -228,6 +240,7 @@ export default defineComponent({
         {
           author: 'XXX',
           avatar: "",
+          content: "",
           style: {
             top:'22.5rem',
             left:'28.75rem',
@@ -244,6 +257,7 @@ export default defineComponent({
         {
           author: 'XXX',
           avatar: "",
+          content: "",
           style: {
             top:'13.375rem',
             left:'42.75rem',
@@ -261,6 +275,7 @@ export default defineComponent({
         {
           author: 'XXX',
           avatar: "",
+          content: "",
           style: {
             top:'24.875rem',
             left:'53.75rem',
@@ -277,6 +292,7 @@ export default defineComponent({
         {
           author: 'XXX',
           avatar: "",
+          content: "",
           style: {
             top:'24.5rem',
             left:'68.5rem',
@@ -293,6 +309,7 @@ export default defineComponent({
         {
           author: 'XXX',
           avatar: "",
+          content: "",
           style: {
             top:'4.5rem',
             left:'62.25rem',
@@ -306,10 +323,87 @@ export default defineComponent({
             height:'1rem'
           }
         },
-      ]
+      ],
+      loadingComments: false,
     })
+
+    const loadComments = async () => {
+      try {
+        state.loadingComments = true;
+        
+        // ... 前面的清空逻辑保持不变 ...
+
+        const res = await get_comments();
+        const rawData = Array.isArray(res) ? res : (res.data || []);
+
+        // 【修正点】：根据 ID 强制进行降序排序，确保最新的永远在 [0]
+        // 这样无论后端返回什么顺序，前端都能保证最新发布的在左上角
+        const newestFirst = [...rawData].sort((a, b) => {
+          // 如果后端有 id，按 id 降序；如果没有，保持原样或按时间戳
+          return (b.id || 0) - (a.id || 0);
+        });
+
+        const freshList = state.commentList.map((template, index) => {
+          const item = newestFirst[index];
+          if (item) {
+            return {
+              ...template,
+              author: item.author || 'Student',
+              content: item.content,
+              id: item.id
+            };
+          }
+          return {
+            ...template,
+            author: 'XXX',
+            content: 'Waiting for your voice...'
+          };
+        });
+
+        state.commentList = freshList;
+      } catch (error) {
+        console.error("Failed to load comments:", error);
+      } finally {
+        state.loadingComments = false;
+      }
+    };
+
+    // --- 修改点 2: 发布并同步刷新 ---
+    const submitComment = async () => {
+      const content = state.shareContent.trim();
+      if (!content) return;
+
+      try {
+        // 1. 发送请求到后端
+        await post_comment({ content: content });
+        
+        // 2. 立即清空输入框
+        state.shareContent = ""; 
+
+        // 3. 【核心修改】在重新获取数据前，手动清空当前页面的所有文字内容
+        // 这一步能确保旧的内容消失，避免新内容没加载出来前显示的还是旧的
+        state.commentList = state.commentList.map(item => ({
+          ...item,
+          author: 'XXX', // 恢复占位符
+          content: 'Refreshing...' // 或者设为空字符串 ""
+        }));
+
+        // 4. 重新调用加载函数，从后端拉取包含新评论的列表
+        await loadComments(); 
+        
+      } catch (error) {
+        console.error("Post failed:", error);
+        // 可选：如果失败了，可以重新加载一次以恢复状态
+        await loadComments();
+      }
+    };
+
+    // 页面初始化时调用
+    loadComments();
+
     return {
-      ...toRefs(state)
+      ...toRefs(state),
+      submitComment,
     }
   }
 })

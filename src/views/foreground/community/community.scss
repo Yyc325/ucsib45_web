@@ -270,6 +270,46 @@
                 }
               }
             }
+            // 在 .comment-input 内部
+            .comment-input-action {
+              display: flex;
+              justify-content: flex-end; // 让按钮靠右对齐
+              margin-top: 24px;
+
+              button {
+                // 基础样式
+                padding: 12px 48px;
+                font-size: 20px;
+                font-weight: 600;
+                color: #fff;
+                background-color: #08012E; // 使用你顶部的深蓝色，呼应主题
+                border: none;
+                border-radius: 40px; // 胶囊形状
+                cursor: pointer;
+                transition: all 0.3s ease; // 平滑过渡
+                box-shadow: 0 4px 12px rgba(8, 1, 46, 0.2);
+
+                // 悬停效果
+                &:hover {
+                  background-color: #1a0a5e; // 稍微变浅一点
+                  transform: translateY(-2px); // 向上微动
+                  box-shadow: 0 6px 20px rgba(8, 1, 46, 0.3);
+                }
+
+                // 点击效果
+                &:active {
+                  transform: translateY(1px); // 向下压入感
+                  box-shadow: 0 2px 8px rgba(8, 1, 46, 0.2);
+                }
+
+                // 禁用状态（比如正在发送时）
+                &:disabled {
+                  background-color: #ccc;
+                  cursor: not-allowed;
+                  transform: none;
+                }
+              }
+            }
           }
         }
       }
