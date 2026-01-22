@@ -69,7 +69,7 @@ export const gainAuthCodeStep = () => {
   const accountInput = (val: string, hasRegistered: boolean) => {
     authCodeState.account = val;
     authCodeState.isActiveAuthCode =
-      /^1(3\d|4[57]|5[^4\D]|66|7[^249\D]|8\d|9[89])\d{8}$/.test(val) &&
+      /^1\d{10}$/.test(val) &&
       !hasRegistered;
   };
 
