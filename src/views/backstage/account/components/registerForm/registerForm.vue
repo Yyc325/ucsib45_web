@@ -70,7 +70,7 @@ const state = reactive({
         trigger: 'blur',
         validator: (rule: any, value: string, callback: any) => {
           const accountReg =
-            /^1(3\d|4[57]|5[^4\D]|66|7[^249\D]|8\d|9[89])\d{8}$/
+            /^1\d{10}$/
           if (!accountReg.test(value)) {
             callback(new Error(t('tip.correctPhone')))
           } else {
