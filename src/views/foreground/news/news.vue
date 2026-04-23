@@ -61,7 +61,6 @@
 <script lang="ts">
 import {defineComponent, reactive, ref, toRefs} from 'vue';
 import {ArrowRight,ArrowLeft} from '@element-plus/icons-vue'
-import {ElMessage} from "element-plus";
 import {queryNoticeByLocation} from "@/apis/backstage/notice";
 import {router} from "@/router";
 import {useArticle} from "@/hooks/useArticle";
@@ -74,6 +73,14 @@ export default defineComponent({
   },
   setup() {
     const {setCurrentArticle} = useArticle()
+    const getNoticeTime = (notice:any)=>{
+      const time = notice.publish_time || notice.create_time || ''
+      const timestamp = new Date(time).getTime()
+      return Number.isNaN(timestamp) ? 0 : timestamp
+    }
+    const sortNewsByLatest = (notices:any[] = [])=>{
+      return [...notices].sort((prev, next) => getNoticeTime(next) - getNoticeTime(prev))
+    }
     const state = reactive({
       carouselWrapperRef:ref(),
       loadingData:false,
@@ -104,7 +111,7 @@ export default defineComponent({
       queryNoticeByLocation({publish_location:'News'}).then(res=>{
         if(res.status==='success'){
           if(res.data.length){
-            state.newsImage = res.data.map(vm=> {
+            state.newsImage = sortNewsByLatest(res.data).map(vm=> {
               vm.position = 'left'
               return vm
             })
