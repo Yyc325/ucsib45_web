@@ -1,0 +1,81 @@
+# -------------------------
+# JetBrains IDEs (PyCharm)
+# -------------------------
+.idea/
+*.iml
+
+
+# -------------------------
+# Python
+# -------------------------
+# 缓存和字节码
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虚拟环境文件夹 (common names)
+venv/
+.venv/
+env/
+.env/
+ENV/
+.ENV/
+env.bak/
+venv.bak/
+
+# 单元测试和覆盖率报告
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+pytestdebug.log
+
+# 敏感信息 (非常重要！)
+# 包含API密钥、数据库密码等的文件
+.env
+.env.*
+secrets.ini
+*.local
+
+# 构建和分发包
+build/
+dist/
+*.egg-info/
+wheels/
+*.egg
+
+
+# -------------------------
+# Django
+# -------------------------
+# 本地数据库文件
+*.sqlite3
+db.sqlite3
+
+# 日志文件
+*.log
+logs/
+
+# Django 收集的静态文件和用户上传的媒体文件
+# 通常不希望将这些生成的文件加入版本控制
+/static/
+/media/
+
+
+# -------------------------
+# Operating System Files
+# -------------------------
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+
+# -------------------------
+# Other
+# -------------------------
+# Notebook
+.ipynb_checkpoints
