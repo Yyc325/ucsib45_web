@@ -1,0 +1,13 @@
+:root {
+  --el-color-primary: #{$systemThemeColor} !important;
+  --el-text-color-placeholder: #{$textDropDownColor} !important;
+  --el-border-color-lighter: #{$cuttingLineColor} !important;
+  --el-text-color-primary: #{$titleText1Color} !important;
+  --el-text-color-regular: #{$titleText1Color} !important;
+  font-size: $rootFontSize;
+  --el-font-size-base: 14px;
+}
+html,
+body {
+  font-size: 16px;
+}

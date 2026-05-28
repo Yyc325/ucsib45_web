@@ -1,0 +1,71 @@
+{
+    "compilerOptions": {
+        // 选项允许接受js文件作为ts文件的输入
+        "allowJs": true,
+        // 允许引入没有默认导出的模块
+        "allowSyntheticDefaultImports": true,
+        // 解析非相对模块名的基准目录
+        "baseUrl": ".",
+        // 支持在 CommonJs 模块下使用 import d from 'cjs'
+        "esModuleInterop": true,
+        // 对修饰器的实验支持功能在将来的版本中可能更改
+        "experimentalDecorators": true,
+        // jsx 的编译方式
+        "jsx": "preserve",
+        // 指定生成哪个模块系统代码
+        "module": "esnext",
+        // 决定如何处理模块
+        "moduleResolution": "node",
+        // 如果编译器无法根据变量的用途推断出变量的类型，它就会悄悄的把变量类型默认为 any
+        "noImplicitAny": false,
+        // 检测是否有无用变量
+        "noUnusedLocals": false,
+        // 检测是否有无用参数
+        "noUnusedParameters": false,
+        // 是否允许导入 JSON
+        "resolveJsonModule": true,
+        // 忽略所有的声明文件（ *.d.ts）的类型检查
+        //解决打包报”vue-tsc --noEmit && vite build" 的错，忽略所有的声明文件(*.d.ts) 的类型检查
+        "skipLibCheck": true,
+        // 生成相应的 .map 文件
+        "sourceMap": true,
+        // 启用所有严格类型检查选项
+        // 启用 --strict相当于启用 --noImplicitAny, --noImplicitThis, --alwaysStrict，
+        // --strictNullChecks和 --strictFunctionTypes和--strictPropertyInitialization
+        "strict": true,
+        // 不允许函数参数双向协变
+        "strictFunctionTypes": false,
+        // 指定ECMAScript目标版本
+        "target": "esnext",
+        // 标志和声明属性修饰符
+        "useDefineForClassFields": true,
+        //解决用字符串做下标报错
+        // 模块名到基于 baseUrl的路径映射的列表
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        },
+        // 编译过程中需要引入的库文件的列表
+        "lib": [
+            "esnext",
+            "dom"
+        ]
+    },
+    // 匹配检测文件
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "types/**/*.d.ts",
+        "types/**/*.ts",
+        "build/**/*.ts",
+        "build/**/*.d.ts",
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "**/*.js"
+    ]
+}

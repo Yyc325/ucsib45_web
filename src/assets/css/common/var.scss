@@ -1,0 +1,70 @@
+// 背景主题色
+$bgPrimaryColor: var(--bg-primary-color, #f3f5f5);
+
+// 按钮颜色
+$primaryButtonColor: var(--primary-button-color, #1457dd);
+/**
+ * 此处为 scss 变量
+ * 故必须 $ 命名方式
+ * var 的第二个参数为默认值
+ * 便于更改主题色, 通过更改 css 变量致使 scss 变量变化
+ */
+
+// 主题色
+$systemThemeColor: var(--system-theme-color, #1664ff);
+
+// 主色
+$primaryColor: var(--primary-color, #ffffff);
+
+// 辅助色
+$assistColor: var(--assist-color, #4086ff);
+
+// title 标题 text1 表示一级标题, 以此类推
+$titleText1Color: var(--title-text1-color, #1d2129);
+
+// 辅助、注释文字
+$textAssistColor: var(--text-assist-color, #86909c);
+
+// 下拉框内文字
+$textDropDownColor: var(--text-drop-down-color, #666666);
+
+// 背景颜色
+$bgPrimaryColor: var(--bg-primary-color, #f4f5f9);
+
+// 分割线
+$cuttingLineColor: var(--cutting-line-color, #e5e8ef);
+
+// 辅助分割线
+$assistCuttingLineColor: var(--assist-cutting-line-color, #d9d9d9);
+
+// 收藏
+$collectColor: var(--collect-color, #ffcc2f);
+
+// 鼠标悬浮
+$mouseHoverColor: var(--mouse-hover-color, #f6f7fb);
+
+// * 星符号
+$starSignColor: var(--star-sign-color, #ff0000);
+
+// 可用状态
+$usableStatusColor: var(--usable-status-color, #02b251);
+
+// 禁用状态
+$disabledStatusColor: var(--disabled-status-color, #cbd1dd);
+
+// 首页图标色
+$homeIconColor: var(--home-icon-color, #b6cef9);
+
+// 阴影
+$shadowColor: var(--shadow-color, #00000019);
+
+// 根标签字体大小
+$rootFontSize: var(--root-font-size);
+
+// 背景色 -
+$bgInfoColor: var(--bg-info-color, #f3f3f3);
+/**
+ * 辅助色模块
+ * 随主题变化的颜色变量 rootInjectTheme 在这个方法中生成
+ */
+$systemThemeOpacityColor: var(--system-theme-opacity-color);
