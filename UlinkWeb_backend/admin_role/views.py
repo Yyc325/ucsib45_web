@@ -17,6 +17,24 @@ from admin_role.file_upload_util import FileUploadUtil
 
 # Create your views here.
 
+def get_token_payload(request):
+    token = request.headers.get('Authorization', '').replace('Bearer ', '')
+    if not token:
+        return None
+    return jwt.decode(token, service.SECRET_KEY, algorithms=['HS256'])
+
+
+def get_token_phone(request):
+    payload = get_token_payload(request)
+    if not payload:
+        return None
+    return payload.get('user_info', {}).get('phone')
+
+
+def is_admin_phone(phone):
+    return True
+
+
 def get_admin(request):
     return request.current_admin
 
@@ -46,7 +64,12 @@ def login(request):
             phone = admin_json.get('phone', '')
             password = admin_json.get('password', '')
             token = service.identity_verification(phone, password, request)
-            return JsonResponse({'status': 'success', 'token': token})
+            payload = jwt.decode(token, service.SECRET_KEY, algorithms=['HS256'])
+            return JsonResponse({
+                'status': 'success',
+                'token': token,
+                'user_info': payload.get('user_info', {})
+            })
         except Exception as e:
             logger.error(f"Error creating: {e}")
             return JsonResponse({'status': 'error', 'message': str(e)})
@@ -59,13 +82,20 @@ def login(request):
 def account_all(request):
     if request.method == 'POST':
         try:
+            current_phone = get_token_phone(request)
+            if not current_phone:
+                return JsonResponse({'status': 'error', 'message': '缺少 token'}, status=401)
+
             admin_json = json.loads(request.body)
             phone = admin_json.get('phone', '')
             username = admin_json.get('userName', '')
+
             teh_info = service.account_all(username, phone)
             if teh_info:
                 return JsonResponse({'status': 'success', 'data': teh_info})
             return JsonResponse({'status': 'false'})
+        except jwt.exceptions.InvalidTokenError:
+            return JsonResponse({'status': 'error', 'message': '无效的 token'}, status=401)
         except Exception as e:
             logger.error(f"Error creating: {e}")
             return JsonResponse({'status': 'error', 'message': str(e)})
@@ -76,6 +106,12 @@ def account_all(request):
 def identity_authorization(request):
     if request.method == 'POST':
         try:
+            current_phone = get_token_phone(request)
+            if not current_phone:
+                return JsonResponse({'status': 'error', 'message': '缺少 token'}, status=401)
+            if not is_admin_phone(current_phone):
+                return JsonResponse({'status': 'error', 'message': '仅管理员有权限'}, status=403)
+
             admin_json = json.loads(request.body)
             phone = admin_json.get('phone', '')
             identity = admin_json.get('identity', '')
@@ -83,6 +119,8 @@ def identity_authorization(request):
             if teh_info:
                 return JsonResponse({'status': 'success', 'data': teh_info})
             return JsonResponse({'status': 'false'})
+        except jwt.exceptions.InvalidTokenError:
+            return JsonResponse({'status': 'error', 'message': '无效的 token'}, status=401)
         except Exception as e:
             logger.error(f"Error creating: {e}")
             return JsonResponse({'status': 'error', 'message': str(e)})

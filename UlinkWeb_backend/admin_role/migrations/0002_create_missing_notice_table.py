@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `admin_notice_copy1` (
     `content` longtext NOT NULL,
     `publisher` varchar(255) NOT NULL,
     `status` varchar(255) NOT NULL,
-    `publish_time` datetime(6) NOT NULL,
+    `publish_time` datetime(6) NULL,
     `create_time` datetime(6) NOT NULL,
     `cover` varchar(255) NULL,
     `position_index` varchar(255) NOT NULL,

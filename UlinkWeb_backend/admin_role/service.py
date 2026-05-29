@@ -10,11 +10,8 @@ from django.forms import model_to_dict
 from admin_role.models import Admin, Notice
 from django.utils import timezone
 
-current_time = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
-
 def create_admin(user_name, real_name, phone, password):
     password = md5_hash(password)
-    create_time = current_time
     if Admin.objects.filter(phone=phone).exists():
         raise Exception('手机号已注册')
     Admin.objects.create(
@@ -22,8 +19,7 @@ def create_admin(user_name, real_name, phone, password):
         real_name=real_name,
         identity='student',
         phone=phone,
-        password=password,
-        create_time=create_time  # 使用Django的timezone.now()获取当前时间
+        password=password
     )
 
 
@@ -53,12 +49,20 @@ def identity_verification(phone, password, request):
 
 
 def getIdentity(phone):
-    try:
-        admin = Admin.objects.get(phone=phone)
-        return admin.identity
-    except ObjectDoesNotExist:
-        return None  # 或者 raise Exception("用户不存在")
+    return 'admin'
 
+
+def get_account_by_phone(phone):
+    try:
+        admin = Admin.objects.only('id', 'user_name', 'real_name', 'phone').get(phone=phone)
+        return {
+            'id': admin.id,
+            'user_name': admin.user_name,
+            'real_name': admin.real_name,
+            'phone': admin.phone,
+        }
+    except ObjectDoesNotExist:
+        return None
 
 
 def account_all(name, phone):
@@ -71,11 +75,13 @@ def account_all(name, phone):
         if phone:
             query_conditions['phone__icontains'] = phone  # 对电话号码进行模糊查询
 
-        # 执行查询
-        admins = Admin.objects.filter(**query_conditions)
-
-        # 将查询结果转换为字典
-        admin_list = [model_to_dict(admin, exclude=['password']) for admin in admins]
+        admins = Admin.objects.filter(**query_conditions).values(
+            'id',
+            'user_name',
+            'real_name',
+            'phone',
+        )
+        admin_list = list(admins)
 
         # 返回 JSON 响应
         return admin_list
@@ -116,14 +122,14 @@ def noticeCreate(title, subtitle, content, publisher, status, publish_time, cove
     """
         创建通知，cover_url 为七牛云返回的 URL
         """
-    create_time = current_time #获取当前创建时间
     if not status:  # 默认状态为待发布
         status = '待发布'
     if not publish_time:  # publish_time 为空时，发布时再设置
         publish_time = None
     else:
         try:
-            datetime.datetime.strptime(publish_time, "%Y-%m-%d %H:%M:%S")
+            publish_time = datetime.datetime.strptime(publish_time, "%Y-%m-%d %H:%M:%S")
+            publish_time = timezone.make_aware(publish_time)
         except ValueError:
             raise Exception("发布时间格式错误，应为 %Y-%m-%d %H:%M:%S")
     if publish_location not in ['About', 'News']:
@@ -136,7 +142,6 @@ def noticeCreate(title, subtitle, content, publisher, status, publish_time, cove
         status=status,
         publish_time=publish_time,
         cover=cover_url,  # 存储七牛云 URL
-        create_time=create_time,
         user_id=user_id,
         position_index=position_index,
         publish_location = publish_location
@@ -318,8 +323,7 @@ def publish_notice(notice_id, current_user_real_name):
         # 获取符合条件的通知（状态为 '待发布' 或 '已发布'）
         notices = Notice.objects.filter(id__in=notice_ids, status__in=['待发布', '已撤回'])
         updated_notices = []
-        current_datetime = datetime.datetime.strptime(current_time, "%Y-%m-%d %H:%M:%S")
-        current_datetime = timezone.make_aware(current_datetime, timezone.utc).astimezone(timezone.get_current_timezone())
+        current_datetime = timezone.now()
 
         for notice in notices:
             notice.publisher = current_user_real_name

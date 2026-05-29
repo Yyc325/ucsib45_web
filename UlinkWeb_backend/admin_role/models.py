@@ -16,7 +16,7 @@ class Notice(models.Model):
     content = models.TextField()
     publisher = models.CharField(max_length=255)
     status = models.CharField(max_length=255)
-    publish_time = models.DateTimeField()
+    publish_time = models.DateTimeField(null=True, blank=True)
     create_time = models.DateTimeField(auto_now_add=True)
     # cover = models.CharField(max_length=255)
     cover = models.CharField(max_length=255, null=True, blank=True)  # 存储七牛云 URL
@@ -27,5 +27,4 @@ class Notice(models.Model):
 
     class Meta:
         db_table = 'admin_notice_copy1'  # 指定数据库表
-
 
