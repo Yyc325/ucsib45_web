@@ -1,9 +1,8 @@
 ### 项目框架
-- Vue3 + Vue Router + Vite + Element Plus + Pinia 
+- Vue3 + Vue Router + Vite + Element Plus + Pinia + Django
 
 ### 环境配置
 #### 安装vscode
-1. 可直接在![vscode官网](https://code.visualstudio.com/download)进行下载
 #### Node 环境搭建
 1. `node版本要求：>=16.0`
 
@@ -17,7 +16,11 @@ npm install
 ```cmd
 npm run dev 
 ```
+```cmd
+python manage.py runserver
+```
+
 - 打包命令
 ```cmd
 npm run build 
-``` 
+```
