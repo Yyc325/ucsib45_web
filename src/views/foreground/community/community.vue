@@ -87,11 +87,14 @@
 import {defineComponent, reactive, toRefs} from 'vue'
 import ContentLayout from "@/views/foreground/aaComponents/ContentLayout/ContentLayout.vue";
 import { get_comments, post_comment } from "@/apis/backstage/comment";
+import { useUser } from "@/hooks/useUser";
+import { ElMessage } from "element-plus";
 
 export default defineComponent({
   name: "community",
   components: {ContentLayout},
   setup() {
+    const { getToken } = useUser();
     const state = reactive({
       shareContent:"",
       photos: [
@@ -372,6 +375,10 @@ export default defineComponent({
     const submitComment = async () => {
       const content = state.shareContent.trim();
       if (!content) return;
+      if (!getToken.value) {
+        ElMessage.warning("Please sign in before posting.");
+        return;
+      }
 
       try {
         // 1. 发送请求到后端
@@ -393,6 +400,7 @@ export default defineComponent({
         
       } catch (error) {
         console.error("Post failed:", error);
+        ElMessage.warning("Post failed. Please sign in and try again.");
         // 可选：如果失败了，可以重新加载一次以恢复状态
         await loadComments();
       }

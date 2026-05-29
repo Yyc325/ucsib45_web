@@ -58,15 +58,15 @@
                     </div>
                   </div>
                 </el-popover>
-                <template v-if="getUserInfo&&getUserInfo.user_name">
+                <template v-if="userDisplayName">
                   <el-popover trigger="click" popper-style="z-index:99999!important">
                     <template #reference>
                       <div class="user-info">
                         <div class="user-info-avatar">
-                          {{ getUserInfo.user_name.split('')[0] }}
+                          {{ userDisplayName.split('')[0] }}
                         </div>
                         <div class="user-info-name">
-                          {{ getUserInfo.user_name }}
+                          {{ userDisplayName }}
                         </div>
                       </div>
                     </template>
@@ -173,19 +173,24 @@ const languages = computed(() => {
     },
   ]
 })
+const userDisplayName = computed(() => {
+  const userInfo = getUserInfo.value;
+  return userInfo?.user_name || userInfo?.real_name || "";
+})
 const entrances = computed(() => {
+  const identity = getUserInfo.value?.identity || "";
   return [
     {
       label: t("header.backstage"),
       value: 'backstage',
-      permission: ['admin', 'teacher']
+      permission: ['admin', 'student', 'parent', 'teacher', ""]
     },
     {
       label: t("header.logout"),
       value: 'logout',
       permission: ['admin', 'student', 'parent', 'teacher', "", null]
     },
-  ].filter(item => item.permission.includes(getUserInfo.value.identity))
+  ].filter(item => item.permission.includes(identity))
 })
 const barMenu = computed(() => {
   return [
@@ -293,6 +298,7 @@ const searchTrigger = () => {
     name: 'Search',
   })
 }
+
 // header高度
 // 定义响应式变量来存储视口高度
 // const viewportHeight = ref(window.innerHeight);

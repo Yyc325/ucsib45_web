@@ -39,7 +39,6 @@
 import { admin_login } from '@/apis/backstage/account'
 import { useUser } from '@/hooks/useUser'
 import { router } from '@/router'
-import { useUserStoreWithOut } from '@/store/modules/userStore'
 import {reactive, toRefs, defineEmits, ref, computed} from 'vue'
 import { useI18n } from 'vue-i18n'
 import {ElMessage} from "element-plus";
@@ -103,26 +102,33 @@ const selection = computed(()=>{
 const login = () => {
 	loginFormRef.value.validate(async (valid: boolean, filed: any) => {
 		if (valid) {
-			admin_login({
-				phone: loginForm.value.account,
-				password: loginForm.value.password
-			}).then((res: any) => {
+			isBtnLoading.value = true
+			try {
+				const res: any = await admin_login({
+					phone: loginForm.value.account,
+					password: loginForm.value.password
+				})
 				if (res.status === "success") {
-					const { setToken, setPhone } = useUser()
+					const { setToken, setPhone, setUserInfo } = useUser()
 					setToken(res.token)
 					setPhone(loginForm.value.account)
+					const currentUser = res.user_info || {
+						user_name: loginForm.value.account,
+						phone: loginForm.value.account
+					}
+					setUserInfo(currentUser)
 					router.push({
-						name: "Home"
+						name: "User"
 					})
 				} else {
-          ElMessage.warning(res.message)
-        }
-			}).catch((err: any) => {
+					ElMessage.warning(res.message)
+				}
+			} catch (err: any) {
 				console.log(err)
-			}).finally(() => {
+				ElMessage.warning(err?.message || t('message.error'))
+			} finally {
 				isBtnLoading.value = false
-			})
-			isBtnLoading.value = false
+			}
 		}
 	})
 }
